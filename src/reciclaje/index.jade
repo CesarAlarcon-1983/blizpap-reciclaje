@@ -1,0 +1,50 @@
+extends ../_layouts/base
+
+block config
+  //- Correct base url pathing for this page
+  - var baseUrl = '../';
+
+block content
+    main.reciclaje
+        section.reciclaje__hero
+            h2.reciclaje__hero__title
+                |reciclaje
+                span modo bilz y pap
+            .reciclaje__hero__container
+                .reciclaje__hero__text Reciclar es mucho mas divertido si lo hacemos en #ModoBilzyPap. <br> Aquí aprenderas todo sobre reciclaje, desde los puntos limpios hasta cómo hacer nuestas divertidas Creaciones con botellas ¡Vamos!
+                img(src="/images/reciclaje/")
+        section.reciclaje__mapa
+            .reciclaje__mapa__container
+                h3.reciclaje__mapa__title 
+                    |mapa
+                    span virtual
+                p.reciclaje__mapa__text ¡quiero reciclar! conocé aquí los puntos limpios más cercanos. porque reciclar es más divertido en #Modobilzypap
+                a.reciclaje__mapa__button(href="#") ingresar al mapa
+            .reciclaje__mapa__container
+               .reciclaje__mapa__image
+                    img(src="#")
+
+
+        section.reciclaje__creaciones
+            .reciclaje__creaciones__container
+               .reciclaje__creaciones__image
+                    img(src="#")
+            .reciclaje__creaciones__container
+                h3.reciclaje__creaciones__title 
+                    |mapa
+                    span virtual
+                p.reciclaje__creaciones__text ¡quiero reciclar! conocé aquí los puntos limpios más cercanos. porque reciclar es más divertido en #Modobilzypap
+                a.reciclaje__creaciones__button(href="#") ingresar al mapa
+
+
+        section.reciclaje__ideas
+            .reciclaje__ideas__container
+                h3.reciclaje__ideas__title 
+                    |mapa
+                    span virtual
+                p.reciclaje__ideas__text ¡quiero reciclar! conocé aquí los puntos limpios más cercanos. porque reciclar es más divertido en #Modobilzypap
+                a.reciclaje__ideas__button(href="#") ingresar al mapa
+            .reciclaje__ideas__container
+               .reciclaje__ideas__image
+                    img(src="#")
+

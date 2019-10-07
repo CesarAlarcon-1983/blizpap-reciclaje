@@ -1,3 +1,95 @@
 .home {
     
+    &__hero {
+        background: $red;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+        overflow: hidden;
+
+        &.js-scrolled {
+            z-index: 2000;
+        }
+
+        &__container {
+            width: 50%;
+        }
+
+        &__title {
+            text-transform: uppercase;
+            color: $white;
+            font-size: 60px;
+            text-align: center;
+            margin: 0;
+            margin-bottom: 20px;
+        }
+
+        &__text {
+            text-transform: uppercase;
+            text-align: center;
+            color: $white;
+            font-size: 20px;
+            margin: 0;
+            font-weight: 900;
+        }
+
+        &__scroll-container{ 
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: $yellow;
+            bottom: -20px;
+            right: 80px;
+        }
+
+        &__arrow-icon {
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+
+            i {
+                font-size: 50px;
+            }
+        }
+
+        &__scroll-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate3d(-50%, -50%, 0);
+            margin: 0;
+            width: 70%;
+            font-size: 16px;
+            color: $red;
+            font-weight: 900;
+            text-transform: uppercase;
+
+            span {
+                display: block;
+                color: $black;
+                font-size: 20px;
+            }
+        }
+    }
+
+    &__reciclaje,
+    &__diversion,
+    &__mundo {
+        height: 100vh;
+        background: $red;
+        padding-top: 100px; 
+
+        &__title {
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 120px;
+            font-weight: 900;
+            color: $white;
+        }
+    }
 }

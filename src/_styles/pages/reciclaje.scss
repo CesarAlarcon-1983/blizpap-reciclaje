@@ -1,0 +1,52 @@
+.reciclaje {
+    &__hero {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        &__title {
+            font-size: 120px;
+            text-align: center;
+            text-transform: uppercase;
+            margin: 0;
+            margin-bottom: 40px;
+
+            span {
+                display: block;
+                font-size: 40px;
+                color: $red;
+                line-height: 0;
+            }
+        }
+
+        &__container {
+            width: 30%;
+            padding: 20px 0;
+        }
+
+        &__text {
+            text-align: center;
+            margin: 0;
+        }
+    }
+
+    &__mapa {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+
+        &__container {
+            width: 40%;
+        }
+
+        &__button {
+            background: $blue;
+            color: $black;
+            padding: 20px;
+        }
+    }
+}

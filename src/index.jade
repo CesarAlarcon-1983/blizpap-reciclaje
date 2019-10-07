@@ -2,3 +2,22 @@ extends _layouts/base
 
 block content
     main.home
+        section.home__hero
+            .home__hero__container
+                h2.home__hero__title ¡Bienvenidos a un sitio de otro mundo!
+                p.home__hero__text diviértete en familia con ideas de otro mundo
+            a.home__hero__scroll-container(href="#reciclaje")
+                .home__hero__arrow-icon
+                    i.fa.fa-arrow-down
+                p.home__hero__scroll-text
+                    |scroll para
+                    span descubrir otro mundo
+        
+        section.home__reciclaje#reciclaje
+            .home__reciclaje__title reciclaje
+
+        section.home__diversion
+            .home__diversion__title diversion
+
+        section.home__mundo
+            .home__mundo__title mundo

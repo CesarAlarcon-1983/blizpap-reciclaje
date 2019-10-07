@@ -1,3 +1,15 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,600');
+@import url('https://fonts.googleapis.com/css?family=Passion+One:300,500,700,900|Roboto:300,500,700,900&display=swap');
 
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+@font-face {
+    font-family: 'Absolut Headline';
+    src: url('/fonts/AbsolutHeadline.eot');
+    src: url('/fonts/AbsolutHeadline.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/AbsolutHeadline.woff2') format('woff2'),
+        url('/fonts/AbsolutHeadline.woff') format('woff'),
+        url('/fonts/AbsolutHeadline.ttf') format('truetype'),
+        url('/fonts/AbsolutHeadline.svg#AbsolutHeadline') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
