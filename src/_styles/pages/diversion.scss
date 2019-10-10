@@ -1,0 +1,583 @@
+.diversion {
+    background: url('/images/diversion/main-bg.jpg') no-repeat center top / cover;
+    overflow: hidden;
+
+    @include mq(md) {
+        background: url('/images/diversion/main-bg.jpg') no-repeat center top / contain;
+    }
+    
+    &__hero {
+        height: 150vh;
+        position: relative;
+        padding-top: 20vh;
+        
+        @include mq(md) {
+            height: 100vh;
+        }
+
+        &__title {
+            font-family: $altFont;
+            text-transform: uppercase;
+            margin: 0;
+            text-align: center;
+            color: $white;
+            font-size: 70px;
+            
+            @include mq(md) {
+                font-size: 150px;
+            }
+        }
+
+        &__container {
+            position: absolute;
+            width: 90%;
+            top: 40%;
+            left: 50%;
+            transform: translate3d(-50%, -50%, 0);
+
+            @include mq(md) {
+                top: 50%;
+                left: auto;
+                transform: translate3d(0, 0, 0);
+                right: 10%;
+                width: 394px;
+                height: 150px;
+            }
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        &__text {
+            position: absolute;
+            left: 50%;
+            text-align: center;
+            top: 45%;
+            transform: translate3d(-50%, -50%, 0);
+            margin: 0;
+            font-weight: 700;
+            z-index: 2;
+            width: 90%;
+            text-transform: uppercase;
+            font-size: 14px;
+            
+            @include mq(md) {
+                font-size: 18px;
+                top: 50%;
+            }
+        }
+    }
+
+    &__cuentos {
+        position: relative;
+        height: 140vh;
+        
+        @include mq(md) {
+            height: 100vh;
+        }
+
+        &__container {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            margin-left: 5%;
+            width: 90%;
+            
+            @include mq(md) {
+                top: 70%;
+                margin-left: 0;
+                width: 100%;
+                padding-left: 12%;
+                width: 40%;
+            }
+        }
+
+        &__title {
+            font-family: $altFont;
+            text-transform: uppercase;
+            line-height: .65;
+            color: $white;
+            margin: 0;
+            font-size: 70px;
+            
+            @include mq(md) {
+                font-size: 100px;
+
+            }
+
+            span {
+                display: block;
+                color: $yellow;
+            }
+        }
+
+        &__text {
+            font-family: $altFont;
+            font-size: 20px;
+            text-transform: uppercase;
+            color: $white;
+        }
+
+        &__button {
+            border: none;
+            text-align: center;
+            position: relative;
+            perspective: 1000;
+            display: block;
+            width: 80%;
+            height: 60px;
+            overflow: hidden;
+            line-height: 55px;
+            text-decoration: none;
+            margin-top: 20px;
+            
+            @include mq(md) {
+                width: 65%;
+            }
+
+            span {
+                position: absolute;
+                box-shadow: 0 20px 10px 1px rgba(0,0,0,.15);
+                top: -30px;
+                left: 0;
+                right: 0;
+                bottom: 4px;
+                background: $yellow;
+                transform: skewY(-2deg);
+            }
+
+            p {
+                font-family: $altFont;
+                color: $black;
+                z-index: 2;
+                position: relative;
+                text-transform: uppercase;
+                font-size: 20px;
+                margin: 0;
+                font-weight: 500;
+            }
+        }
+    }
+
+    &__juegos {
+        height: 100vh;
+
+        &__container {
+            width: 100%;
+            padding: 0 15px;
+
+            @include mq(md) {
+                padding: 0 12%;
+            }
+        }
+
+        &__title {
+            color: $white;
+            text-transform: uppercase;
+            font-family: $altFont;
+            text-align: center;
+            margin: 0;
+            font-size: 50px;
+            
+            @include mq(md) {
+                font-size: 120px;
+            }
+
+            span {
+                color: $yellow;
+            }
+        }
+
+        &__text {
+            color: $white;
+            text-transform: uppercase;
+            font-family: $altFont;
+            text-align: center;
+            margin: 0;
+            font-size: 20px;
+            margin-bottom: 40px;
+        }
+
+        &__slide {
+            height: 350px;
+            background: url('/images/diversion/slide.jpg') no-repeat center center / cover;
+            border-radius: 25px;
+            display: inline-flex !important;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: 20px;
+
+            @include mq(md) {
+                padding-left: 80px;
+            }
+        }
+
+        &__slide-title {
+            color: $white;
+            margin: 0;
+            margin-bottom: 20px;
+            font-family: $altFont;
+            text-transform: uppercase;
+            line-height: .7;
+            font-size: 40px;
+            
+            @include mq(md) {
+                font-size: 60px;
+            }
+        }
+
+        &__slide-button {
+            display: block;
+            border-radius: 50px;
+            width: 50%;
+            text-decoration: none;
+            background: $yellow;
+            border: none;
+            outline: none;
+            text-transform: uppercase;
+            text-align: center;
+            line-height: 50px;
+            height: 50px;
+            color: $black;
+            font-weight: 900;
+            font-family: $mainFont;
+
+            @include mq(md) {
+                width: 15%;
+
+            }
+        }
+        
+        .slick-slider {
+            margin-bottom: 0 !important;
+        }
+
+        .slick-dots {
+            bottom: -50px;
+            
+            .slick-active {
+                button {
+                    &:before {
+                        color: $yellow;
+                        font-size: 14px;
+                    }                    
+                }
+            }
+
+            li {
+                button {
+                    &:before {
+                        opacity: 1;
+                    }                    
+                }
+            }
+        }
+    }
+
+    &__familia {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        
+        @include mq(md) {
+            padding-top: 30%;
+        }
+
+        &__container {
+            width: 90%;
+            margin-left: 5%;    
+            
+            @include mq(md) {
+                width: 30%;    
+                margin-left: 60%;
+            }
+        }
+
+        &__title {
+            color: $white;
+            text-transform: uppercase;
+            font-family: $altFont;
+            line-height: .7;
+            margin: 0;
+            margin-bottom: 20px;
+            font-size: 50px;
+            
+            @include mq(md) {
+                font-size: 70px;
+            }
+
+            span {
+                display: block;
+                font-size: 70px;
+                
+                @include mq(md) {
+                    font-size: 90px;
+                }
+            }
+        }
+
+        &__text {
+            color: $white;
+            text-transform: uppercase;
+            font-family: $altFont;
+            font-size: 20px;
+            margin: 0;
+            margin-bottom: 20px;
+        }
+
+        &__button {
+            border: none;
+            text-align: center;
+            position: relative;
+            perspective: 1000;
+            display: block;
+            width: 80%;
+            height: 60px;
+            overflow: hidden;
+            line-height: 55px;
+            text-decoration: none;
+            margin-top: 20px;
+            
+            @include mq(md) {
+                width: 40%;
+            }
+
+            span {
+                position: absolute;
+                box-shadow: 0 20px 10px 1px rgba(0,0,0,.15);
+                top: -30px;
+                left: 0;
+                right: 0;
+                bottom: 4px;
+                background: $yellow;
+                transform: skewY(-2deg);
+            }
+
+            p {
+                font-family: $altFont;
+                color: $black;
+                z-index: 2;
+                position: relative;
+                text-transform: uppercase;
+                font-size: 20px;
+                margin: 0;
+                font-weight: 500;
+            }
+        }
+    }
+
+    &__compartir {
+        height: 100vh;
+        padding: 0 15px;
+        display: flex;
+        align-items: center;
+
+        @include mq(md) {
+            padding: 0 12%;
+        }
+
+        &__container {
+            width: 100%;
+            
+            @include mq(md) {
+                width: 50%;
+            }
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        &__title {
+            font-size: 100px;
+            color: $yellow;
+            font-family: $altFont;
+            line-height: .7;
+            text-transform: uppercase;
+            margin: 0;
+            margin-bottom: 20px;
+
+            @include mq(md) {
+                font-size: 150px;
+            }
+
+            span {
+                display: block;
+                color: $white;
+                font-size: 70px;
+
+                @include mq(md) {
+                    font-size: 90px;
+                }
+            }
+        }
+
+        &__text {
+            color: $white;
+            text-transform: uppercase;
+            font-family: $altFont;
+            font-size: 20px;
+        }
+        
+        &__button {
+            border: none;
+            text-align: center;
+            position: relative;
+            perspective: 1000;
+            display: block;
+            width: 100%;
+            height: 60px;
+            overflow: hidden;
+            line-height: 55px;
+            text-decoration: none;
+            margin-top: 20px;
+            
+            @include mq(md) {
+                width: 70%;
+            }
+
+            span {
+                position: absolute;
+                box-shadow: 0 20px 10px 1px rgba(0,0,0,.15);
+                top: -30px;
+                left: 0;
+                right: 0;
+                bottom: 4px;
+                background: $yellow;
+                transform: skewY(-2deg);
+            }
+
+            p {
+                font-family: $altFont;
+                color: $black;
+                z-index: 2;
+                position: relative;
+                text-transform: uppercase;
+                font-size: 20px;
+                margin: 0;
+                font-weight: 500;
+            }
+        }    
+    }
+
+    &__concurso {
+        padding: 50px 15px;
+        background: url('/images/diversion/concursos-bg.jpg') no-repeat center center / cover;
+        display: flex;
+        flex-direction: column;
+        
+        @include mq(md) {
+            height: 100vh;
+            flex-direction: row;
+            padding: 0 12%;
+        }
+    
+        &__container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            
+            @include mq(md) {
+                width: 50%;
+                justify-content: center;
+            }
+
+            &:first-child {
+                order: 2;
+
+                @include mq(md) {
+                    order: 1;
+                }
+            }
+            
+            &:last-child {
+                order: 1;
+                margin-bottom: 50px;
+                
+                @include mq(md) {
+                    padding-top: 0;
+                    padding-left: 80px;
+                    order: 2;
+                    margin-bottom: 0;
+                }
+            }
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        &__title {
+            font-size: 50px;
+            color: $white;
+            font-family: $altFont;
+            line-height: .7;
+            text-transform: uppercase;
+            margin: 0;
+            margin-bottom: 20px;
+
+            @include mq(md) {
+                font-size: 90px;
+            }
+        }
+
+        &__text {
+            color: $white;
+            text-transform: uppercase;
+            font-family: $altFont;
+            font-size: 20px;
+
+            br {
+                display: none;
+
+                @include mq(md) {
+                    display: block;
+                }
+            }
+        }
+
+        &__button {
+            border: none;
+            text-align: center;
+            position: relative;
+            perspective: 1000;
+            display: block;
+            width: 80%;
+            height: 60px;
+            overflow: hidden;
+            line-height: 55px;
+            text-decoration: none;
+            margin-top: 20px;
+            
+            @include mq(md) {
+                width: 45%;
+            }
+
+            span {
+                position: absolute;
+                box-shadow: 0 20px 10px 1px rgba(0,0,0,.15);
+                top: -30px;
+                left: 0;
+                right: 0;
+                bottom: 4px;
+                background: $blue;
+                transform: skewY(-2deg);
+            }
+
+            p {
+                font-family: $altFont;
+                color: $black;
+                z-index: 2;
+                position: relative;
+                text-transform: uppercase;
+                font-size: 20px;
+                margin: 0;
+                font-weight: 500;
+            }
+        }
+    }
+}

@@ -13,7 +13,7 @@ var Header = function() {
     });
 
     $(document).on('scroll', function() {
-        if($(document).scrollTop() > 400) {
+        if($(document).scrollTop() > scroll) {
             header.addClass('js-scrolled');
             homeHero.addClass('js-scrolled');
         } else {
@@ -22,12 +22,27 @@ var Header = function() {
         }
     })
 
-    var viewport = 0; 
+    var viewport = 0;
+    var scroll = 0;
+
     if($(window).width() < 640) {
         viewport = 110;
+        scroll = 100;
     } else {
         viewport = 0;
-    } 
+        scroll = 400;
+    }
+
+    // var indicator = $('.-indicator');
+
+    // var windowHeight = $(window).height();
+    
+    // $(window).on('scroll', function() {
+        
+    // })
+    // for(var i = 0; i < indicator.length; i++) {
+
+    // }
 
     $('a[href*="#"]')
     // Remove links that don't actually link to anything
@@ -47,9 +62,6 @@ var Header = function() {
             if (target.length) {
                 // Only prevent default if animation is actually gonna happen
                 event.preventDefault();
-                if(viewport > 640) {
-
-                }
 
                 $('html, body').animate({
                     scrollTop: target.offset().top - viewport

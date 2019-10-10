@@ -1,0 +1,78 @@
+extends ../_layouts/base
+
+include ../_modules/slider/slider
+
+block config
+  //- Correct base url pathing for this page
+  - var baseUrl = '../';
+
+block content
+    main.diversion
+        section.diversion__hero
+            h2.diversion__hero__title diversión
+            .diversion__hero__container
+                img(src="/images/diversion/text-globe.png")
+                p.diversion__hero__text ¡cuando estamos en #modobilzypap la diversión no para! para encontrar la diversión solo debes ponerte en #modobilzypap
+
+        section.diversion__cuentos
+            .diversion__cuentos__container
+                h3.diversion__cuentos__title
+                    |cuenta
+                    span cuentos
+                p.diversion__cuentos__text lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                a.diversion__cuentos__button(href="/cuentos")
+                    span
+                    p descubre las historias
+
+        section.diversion__juegos
+            .diversion__juegos__container
+                h3.diversion__juegos__title
+                    |mini 
+                    span juegos
+                p.diversion__juegos__text ¡cuando estamos en #modobilzypap<br>la diversión la encontramos en todos lados!
+
+                +slider('diversion__juegos__slider', 'normal')
+                    .diversion__juegos__slide
+                        .diversion__juegos__slide-container
+                            h3.diversion__juegos__slide-title diviertete<br>buscando<br>a bily y maik
+                            a.diversion__juegos__slide-button(href="") jugar
+                    .diversion__juegos__slide
+                        .diversion__juegos__slide-container
+                            h3.diversion__juegos__slide-title lorem<br>ipsum<br>a bily y maik
+                            a.diversion__juegos__slide-button(href="") jugar
+                    .diversion__juegos__slide
+                        .diversion__juegos__slide-container
+                            h3.diversion__juegos__slide-title dolor<br>amet<br>a bily y maik
+                            a.diversion__juegos__slide-button(href="") jugar
+
+        section.diversion__familia
+            .diversion__familia__container
+                h3.diversion__familia__title
+                    |diversión
+                    span en familia
+                p.diversion__familia__text mira lo bien que lo pasamos cada vez que visitamos estos divertidos lugares
+                a.diversion__familia__button(href="/mapa")
+                    span
+                    p descubrir
+
+        section.diversion__compartir
+            .diversion__compartir__container
+                h3.diversion__compartir__title
+                    |tu
+                    span diversión
+                p.diversion__compartir__text sube una foto y comparte con nosotros la forma más entretenida que tienes para divertirte.<br><br>¡comparte en tus redes sociales tus mejores fotos divirtiéndote! usa el hastag #modobilzypap y también conoce cómo se divierten los demás.
+                a.diversion__compartir__button(href="/cuentos")
+                    span
+                    p la diversión está en todos lados
+            .diversion__compartir__container
+                img(src="/images/diversion/tu-diversion.png")
+   
+        section.diversion__concurso
+            .diversion__concurso__container
+                img(src="/images/diversion/concursos.png")
+            .diversion__concurso__container
+                h3.diversion__concurso__title concursos
+                p.diversion__concurso__text ponte en #modobilzypap y<br>participa por increibles premios
+                a.diversion__concurso__button(href="/cuentos")
+                    span
+                    p ¡participa!

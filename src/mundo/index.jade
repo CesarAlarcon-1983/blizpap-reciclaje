@@ -1,0 +1,32 @@
+extends ../_layouts/base
+
+block config
+  //- Correct base url pathing for this page
+  - var baseUrl = '../';
+
+block content
+    main.mundo
+        section.mundo__hero
+            .mundo__hero__container
+                h2.mundo__hero__title
+                    |mundo
+                    span bilz y pap
+                p.mundo__hero__text ¡bienvenido al mundo de bilz y pap! conoce aquí toda nuestra aventura en el tiempo.
+
+        section.mundo__historia
+            .mundo__historia__container
+                h3.mundo__historia__title historia
+                p.mundo__historia__text ¡tenemos una historia muy divertida! conoce más de nuestra aventura aquí
+                a.mundo__historia__button nuestra aventura
+
+        section.mundo__productos
+            .mundo__productos__container
+                h3.mundo__productos__title productos
+                p.mundo__productos__text que rico es divertirse compartiendo con bilz y pap
+                a.mundo__productos__button bebidas de otro mundo
+
+        section.mundo__campanas
+            .mundo__campanas__container
+                h3.mundo__campanas__title campañas
+                p.mundo__campanas__text vuelve a ver aquí nuestras campañas de otro mundo
+                a.mundo__campanas__button nuestras campañas

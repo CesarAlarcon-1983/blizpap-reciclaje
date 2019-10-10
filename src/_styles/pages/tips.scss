@@ -1,0 +1,114 @@
+.tips {
+    padding-top: 22vh;
+    padding-bottom: 10vh;
+    background: url('/images/reciclado/tips-bg.jpg') no-repeat center center / cover;
+
+    &__title {
+        text-transform: uppercase;
+        color: $yellow;
+        text-align: center;
+        font-size: 150px;
+        font-family: $altFont;
+        margin: 0;
+        margin-bottom: 40px;
+    }
+
+
+    &__container {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+
+        @include mq(md) {
+            width: 60%;
+        }
+    }
+
+    &__tip {
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+
+        @include mq(md) {
+            justify-content: space-between;
+            flex-direction: row;
+        }
+
+        &__image {
+            position: relative;
+            height: 0;
+            overflow: hidden;
+            border-radius: 5px;
+            padding-bottom: 100%;
+            width: 100%;
+            order: 2;
+
+            @include mq(md) {
+                padding-bottom: 30%;
+                width: 30%;
+                order: 1;
+            }
+
+            img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate3d(-50%, -50%, 0);
+                min-width: 100%;
+                min-height: 100%;
+            }
+        }
+
+        &__content {
+            width: 100%;
+            background: $white;
+            border-radius: 5px;
+            padding: 20px 40px;
+            order: 1;
+
+            @include mq(md) {
+                width: 68%;
+                order: 2;
+            }
+
+            span {
+                color: $red;
+                font-size: 40px;
+                font-family: $altFont;
+            }
+
+            p {
+                text-transform: uppercase;
+                font-family: $altFont;
+                color: $darkestGray;
+                font-size: 20px;
+                margin: 0;
+                margin-bottom: 20px;
+            }
+
+            ul {
+                display: flex;
+            }
+
+            li {
+                margin-right: 10px;
+                background: $blue;
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+            }
+
+            a {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            i {
+                color: $white;
+            }
+        }
+    }
+}

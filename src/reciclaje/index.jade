@@ -7,44 +7,58 @@ block config
 block content
     main.reciclaje
         section.reciclaje__hero
+            img(src="/images/reciclado/hero-personajes.png")
             h2.reciclaje__hero__title
                 |reciclaje
                 span modo bilz y pap
             .reciclaje__hero__container
-                .reciclaje__hero__text Reciclar es mucho mas divertido si lo hacemos en #ModoBilzyPap. <br> Aquí aprenderas todo sobre reciclaje, desde los puntos limpios hasta cómo hacer nuestas divertidas Creaciones con botellas ¡Vamos!
-                img(src="/images/reciclaje/")
+                p.reciclaje__hero__text Reciclar es mucho mas divertido si lo hacemos en #ModoBilzyPap. <br> Aquí aprenderas todo sobre reciclaje, desde los puntos limpios hasta cómo hacer nuestas divertidas Creaciones con botellas ¡Vamos!
+                img(src="/images/reciclado/hero-pergamino.png")
+      
         section.reciclaje__mapa
-            .reciclaje__mapa__container
+            .reciclaje__mapa__container.reciclaje__mapa__container--left
                 h3.reciclaje__mapa__title 
                     |mapa
                     span virtual
                 p.reciclaje__mapa__text ¡quiero reciclar! conocé aquí los puntos limpios más cercanos. porque reciclar es más divertido en #Modobilzypap
-                a.reciclaje__mapa__button(href="#") ingresar al mapa
-            .reciclaje__mapa__container
+                a.reciclaje__mapa__button(href="/mapa")
+                    span
+                    p ingresar al mapa
+            .reciclaje__mapa__container.reciclaje__mapa__container--right
                .reciclaje__mapa__image
-                    img(src="#")
-
+                    img(src="/images/reciclado/mapa.png")
 
         section.reciclaje__creaciones
             .reciclaje__creaciones__container
                .reciclaje__creaciones__image
-                    img(src="#")
+                    img(src="/images/reciclado/creaciones.png")
             .reciclaje__creaciones__container
-                h3.reciclaje__creaciones__title 
-                    |mapa
-                    span virtual
-                p.reciclaje__creaciones__text ¡quiero reciclar! conocé aquí los puntos limpios más cercanos. porque reciclar es más divertido en #Modobilzypap
-                a.reciclaje__creaciones__button(href="#") ingresar al mapa
-
+                h3.reciclaje__creaciones__title creaciones 
+                p.reciclaje__creaciones__text ponte en reciclaje #modobilzypap y crea las mejores ideas reciclando botellas
+                a.reciclaje__creaciones__button(href="/creaciones")
+                    span
+                    p entrar
 
         section.reciclaje__ideas
-            .reciclaje__ideas__container
+            .reciclaje__ideas__container.reciclaje__ideas__container--left
                 h3.reciclaje__ideas__title 
-                    |mapa
-                    span virtual
-                p.reciclaje__ideas__text ¡quiero reciclar! conocé aquí los puntos limpios más cercanos. porque reciclar es más divertido en #Modobilzypap
-                a.reciclaje__ideas__button(href="#") ingresar al mapa
-            .reciclaje__ideas__container
+                    |sube tu 
+                    span idea
+                p.reciclaje__ideas__text ¿tienes una idea y necesitas contarle al mundo? cuéntanos lo que tienes en mente aquí
+                a.reciclaje__ideas__button(href="/ideas")
+                    span
+                    p ingresar al mapa
+            .reciclaje__ideas__container.reciclaje__ideas__container--right
                .reciclaje__ideas__image
-                    img(src="#")
+                    img(src="/images/reciclado/idea.png")
 
+        section.reciclaje__tips
+            .reciclaje__tips__container
+               .reciclaje__tips__image
+                    img(src="/images/reciclado/tips.png")
+            .reciclaje__tips__container
+                h3.reciclaje__tips__title tips 
+                p.reciclaje__tips__text estos tips son infaltables para crear otro mundo. para saberlos todos ingresa aquí
+                a.reciclaje__tips__button(href="/tips")
+                    span
+                    p conoce los tips

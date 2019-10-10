@@ -1,0 +1,107 @@
+extends ../_layouts/base
+
+include ../_modules/slider/slider
+
+block config
+  //- Correct base url pathing for this page
+  - var baseUrl = '../';
+
+block content
+    main.ideas
+        section.ideas__hero
+            .ideas__hero__container
+                h2.ideas__hero__title sube tu idea
+                p.ideas__hero__text porque todos ceremos otro mundo, más ecológico y entretenido te invitamos a compartir tus mejores ideas, sueños y proyectos.<br><br>cuéntanos tu idea y súmate a reciclaje modo bilz y pap.
+                a.ideas__hero__button(href="#")
+                    span
+                    p ¡participar!
+        section.ideas__content
+            .ideas__participar
+                h2.ideas__participar__title ¡participa!
+                p.ideas__participar__text ¡escribe tus ideas para otro mundo!
+                form.ideas__participar__form
+                    img(src="/images/reciclado/idea-form-icons.png")
+                    .ideas__participar__group
+                        input.ideas__participar__input(placeholder="nombre")
+                    .ideas__participar__group
+                        input.ideas__participar__input(placeholder="edad")
+                    .ideas__participar__group
+                        input.ideas__participar__input(placeholder="ciudad")
+                    .ideas__participar__group
+                        input.ideas__participar__input(placeholder="correo")
+                    .ideas__participar__group.ideas__participar__group--textarea
+                        textarea.ideas__participar__input.ideas__participar__input--textarea(placeholder="escribe una o mas ideas o sueños de reciclaje para hacer de este mundo más ecológico junto a bilz y pap...")
+                    .ideas__participar__group.ideas__participar__group--blue
+                        p adjunta aca una foto o dibujo de tu proyecto o de cómo te lo imaginas
+                        .ideas__participar__wrapper
+                            label.ideas__participar__label(for="file") adjuntar
+                            input.ideas__participar__input.ideas__participar__input--file(type="file" id="file" name="file")
+            .ideas__gallery
+                h2.ideas__gallery__title ideas de nuestros participantes
+                .ideas__gallery__container
+                    +slider('ideas__gallery__slider', 'multi')
+                        .ideas__gallery__slide
+                            .ideas__gallery__idea
+                                .ideas__gallery__image
+                                    img(src="https://picsum.photos/id/237/1200/1300")
+                                h3.ideas__gallery__idea-title individuales plasticos
+                                p.ideas__gallery__idea-name cristobal
+                                p.ideas__gallery__idea-text Muy buena idea para utilizar las tapas plasticas. Solo necesitas pegamento y tapas y podras hacer unos lindos individuales.
+
+                        .ideas__gallery__slide
+                            .ideas__gallery__idea
+                                .ideas__gallery__image
+                                    img(src="https://picsum.photos/id/238/1200/1300")
+                                h3.ideas__gallery__idea-title individuales plasticos
+                                p.ideas__gallery__idea-name cristobal
+                                p.ideas__gallery__idea-text Muy buena idea para utilizar las tapas plasticas. Solo necesitas pegamento y tapas y podras hacer unos lindos individuales.
+                        .ideas__gallery__slide
+                            .ideas__gallery__idea
+                                .ideas__gallery__image
+                                    img(src="https://picsum.photos/id/239/1200/1300")
+                                h3.ideas__gallery__idea-title individuales plasticos
+                                p.ideas__gallery__idea-name cristobal
+                                p.ideas__gallery__idea-text Muy buena idea para utilizar las tapas plasticas. Solo necesitas pegamento y tapas y podras hacer unos lindos individuales.
+                        .ideas__gallery__slide
+                            .ideas__gallery__idea
+                                .ideas__gallery__image
+                                    img(src="https://picsum.photos/id/230/1200/1300")
+                                h3.ideas__gallery__idea-title individuales plasticos
+                                p.ideas__gallery__idea-name cristobal
+                                p.ideas__gallery__idea-text Muy buena idea para utilizar las tapas plasticas. Solo necesitas pegamento y tapas y podras hacer unos lindos individuales.
+                        .ideas__gallery__slide
+                            .ideas__gallery__idea
+                                .ideas__gallery__image
+                                    img(src="https://picsum.photos/id/231/1200/1300")
+                                h3.ideas__gallery__idea-title individuales plasticos
+                                p.ideas__gallery__idea-name cristobal
+                                p.ideas__gallery__idea-text Muy buena idea para utilizar las tapas plasticas. Solo necesitas pegamento y tapas y podras hacer unos lindos individuales.
+                        .ideas__gallery__slide
+                            .ideas__gallery__idea
+                                .ideas__gallery__image
+                                    img(src="https://picsum.photos/id/232/1200/1300")
+                                h3.ideas__gallery__idea-title individuales plasticos
+                                p.ideas__gallery__idea-name cristobal
+                                p.ideas__gallery__idea-text Muy buena idea para utilizar las tapas plasticas. Solo necesitas pegamento y tapas y podras hacer unos lindos individuales.
+                        .ideas__gallery__slide
+                            .ideas__gallery__idea
+                                .ideas__gallery__image
+                                    img(src="https://picsum.photos/id/233/1200/1300")
+                                h3.ideas__gallery__idea-title individuales plasticos
+                                p.ideas__gallery__idea-name cristobal
+                                p.ideas__gallery__idea-text Muy buena idea para utilizar las tapas plasticas. Solo necesitas pegamento y tapas y podras hacer unos lindos individuales.
+                        .ideas__gallery__slide
+                            .ideas__gallery__idea
+                                .ideas__gallery__image
+                                    img(src="https://picsum.photos/id/234/1200/1300")
+                                h3.ideas__gallery__idea-title individuales plasticos
+                                p.ideas__gallery__idea-name cristobal
+                                p.ideas__gallery__idea-text Muy buena idea para utilizar las tapas plasticas. Solo necesitas pegamento y tapas y podras hacer unos lindos individuales.
+                        .ideas__gallery__slide
+                            .ideas__gallery__idea
+                                .ideas__gallery__image
+                                    img(src="https://picsum.photos/id/235/1200/1300")
+                                h3.ideas__gallery__idea-title individuales plasticos
+                                p.ideas__gallery__idea-name cristobal
+                                p.ideas__gallery__idea-text Muy buena idea para utilizar las tapas plasticas. Solo necesitas pegamento y tapas y podras hacer unos lindos individuales.
+    

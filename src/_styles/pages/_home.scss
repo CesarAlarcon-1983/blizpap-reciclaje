@@ -1,12 +1,40 @@
 .home {
-    
+
+    $h: &;
+
+    position: relative;
+    overflow: hidden;
+
+    &__indicators {
+        @include mq(md) {
+            position: fixed;
+            top: 50%;
+            right: 80px;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 5000;
+
+            span {
+                margin: 15px 0;
+                width: 7px;
+                height: 7px;
+                border-radius: 50%;
+                background: $white;
+
+                &.-active {
+                    width: 15px;
+                    height: 15px;
+                    background: $yellow;
+                }
+            }
+        }
+    }
+
     &__hero {
-        background: $red;
         height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
         position: relative;
         overflow: hidden;
 
@@ -14,17 +42,119 @@
             z-index: 2000;
         }
 
+        &__slider {
+            width: 100%;
+            height: 100%;
+        }
+
+        .slick-slide,
+        .slick-track,
+        .slick-list {
+            height: 100%;
+            margin: 0;
+
+            > div {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .slick-dots {
+            display: none !important;
+        }
+
+        &__slide {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            background: url('/images/home/hero.jpg') no-repeat center center / cover;
+
+            &.-second {
+                background: url('/images/home/hero-2.jpg') no-repeat center center / cover;
+
+                img {
+                    position: absolute;
+                    top: 50%;
+                    right: 150px;
+                    transform: translate3d(0,-50%, 0);
+                    width: auto;
+                    height: 60%;
+                }
+            }
+
+            &.-third {
+                background: url('/images/home/hero-3.jpg') no-repeat center center / cover;
+            }
+
+            img {
+                position: absolute;
+                transform: translateY(-50%);
+                width: auto;
+                height: 25%;
+                                
+                @include mq(md) {
+                    height: 55%;
+                }
+
+                &.-align-left {
+                    left: 0;
+                    top: 75%;
+                                        
+                    @include mq(md) {
+                        top: 55%;
+                    }
+                }
+
+                &.-align-right {
+                    right: 0;
+                    top: 25%;                    
+                    @include mq(md) {
+                        top: 45%;
+                    }
+                }
+            }
+        }
+
         &__container {
-            width: 50%;
+            width: 90%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate3d(-50%,-50%, 0);
+
+            @include mq(md) {
+                width: 50%;
+            }
+
+            &.-left {
+                transform: translate3d(0,-50%, 0);
+                left: 15px;
+
+                @include mq(md) {
+                    left: 80px;
+                    width: 35%;
+                }
+
+                #{$h}__hero__title,
+                #{$h}__hero__text {
+                    text-align: left;
+                }
+            }
         }
 
         &__title {
             text-transform: uppercase;
             color: $white;
-            font-size: 60px;
             text-align: center;
             margin: 0;
             margin-bottom: 20px;
+            font-size: 40px;
+            font-family: $altFont;
+            line-height: .9;
+
+            @include mq(md){ 
+                font-size: 70px;
+            }
         }
 
         &__text {
@@ -36,14 +166,58 @@
             font-weight: 900;
         }
 
+        &__button {
+            border: none;
+            text-align: center;
+            position: relative;
+            perspective: 1000;
+            display: block;
+            width: 40%;
+            height: 60px;
+            overflow: hidden;
+            line-height: 55px;
+            text-decoration: none;
+            margin-top: 20px;
+            
+            span {
+                position: absolute;
+                box-shadow: 0 20px 10px 1px rgba(0,0,0,.15);
+                top: -30px;
+                left: 0;
+                right: 0;
+                bottom: 4px;
+                background: $yellow;
+                transform: skewY(-2deg);
+            }
+
+            p {
+                font-family: $altFont;
+                color: $black;
+                z-index: 2;
+                position: relative;
+                text-transform: uppercase;
+                font-size: 20px;
+                margin: 0;
+                font-weight: 500;
+            }
+        }
+
         &__scroll-container{ 
             position: absolute;
-            width: 200px;
-            height: 200px;
+            width: 120px;
+            height: 120px;
             border-radius: 50%;
             background: $yellow;
+            right: 20px;
+            z-index: 2000;
             bottom: -20px;
-            right: 80px;
+            
+            @include mq(md) {
+                bottom: -50px;
+                width: 200px;
+                height: 200px;
+                right: 80px;
+            }
         }
 
         &__arrow-icon {
@@ -53,7 +227,11 @@
             transform: translateX(-50%);
 
             i {
-                font-size: 50px;
+                font-size: 30px;
+
+                @include mq(md) {
+                    font-size: 50px;
+                }
             }
         }
 
@@ -64,15 +242,23 @@
             transform: translate3d(-50%, -50%, 0);
             margin: 0;
             width: 70%;
-            font-size: 16px;
+            font-size: 12px;
             color: $red;
             font-weight: 900;
             text-transform: uppercase;
 
+            @include mq(md) {
+                font-size: 16px;
+            }
+            
             span {
                 display: block;
                 color: $black;
-                font-size: 20px;
+                font-size: 12px;
+
+                @include mq(md) {
+                    font-size: 20px;
+                }
             }
         }
     }
@@ -87,9 +273,203 @@
         &__title {
             text-transform: uppercase;
             text-align: center;
-            font-size: 120px;
-            font-weight: 900;
+            font-size: 40px;
+            font-weight: 500;
             color: $white;
+            margin: 0;
+
+            @include mq(md) {
+                font-size: 120px;
+            }
         }
     }
+
+    &__reciclaje {
+        background: url('/images/home/reciclaje.jpg') no-repeat center center / cover;
+        position: relative;
+
+        &__tooltips {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        &__tooltip {
+            position: absolute;
+    
+            img {
+                @include trans;
+
+                position: absolute;
+                left: 50%;
+                right: 50%;
+                transform: translate3d(-50%, -50%, 0);
+
+                &.-open {
+                    opacity: 0;
+                    overflow: hidden;
+                }
+            }
+
+            &:hover {
+                img {
+                    &.-open {
+                        opacity: 1;
+                        overflow: visible;
+                    }
+                }
+            }
+    
+            &:nth-child(1) {
+                top: 75%;
+                left: 23%;
+            }
+            &:nth-child(2) {
+                top: 80%;
+                left: 38%;
+            }
+            &:nth-child(3) {
+                top: 36%;
+                left: 57%;
+            }
+            &:nth-child(4) {
+                top: 70%;
+                left: 75%;
+            }
+            &:nth-child(5) {
+                top: 90%;
+                left: 80%;
+            }
+        }
+    }
+
+    &__diversion {
+        background: url('/images/home/diversion.jpg') no-repeat center center / cover;
+        position: relative;
+
+        &__tooltips {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        &__tooltip {
+            position: absolute;
+    
+            img {
+                @include trans;
+
+                position: absolute;
+                left: 50%;
+                right: 50%;
+                transform: translate3d(-50%, -50%, 0);
+
+                &.-open {
+                    opacity: 0;
+                    overflow: hidden;
+                }
+            }
+
+            &:hover {
+                img {
+                    &.-open {
+                        opacity: 1;
+                        overflow: visible;
+                    }
+                }
+            }
+    
+            &:nth-child(1) {
+                top: 36%;
+                left: 40%;
+            }
+            &:nth-child(2) {
+                top: 80%;
+                left: 38%;
+            }
+            &:nth-child(3) {
+                top: 74%;
+                left: 53%;
+            }
+            &:nth-child(4) {
+                top: 55%;
+                left: 65%;
+            }
+            &:nth-child(5) {
+                top: 90%;
+                left: 73%;
+            }
+        }
+    }
+
+    &__mundo {
+        background: url('/images/home/mundo.jpg') no-repeat center center / cover;
+        position: relative;
+
+        &__tooltips {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        &__tooltip {
+            position: absolute;
+    
+            img {
+                @include trans;
+
+                position: absolute;
+                left: 50%;
+                right: 50%;
+                transform: translate3d(-50%, -50%, 0);
+
+                &.-open {
+                    opacity: 0;
+                    overflow: hidden;
+                }
+            }
+
+            &:hover {
+                img {
+                    &.-open {
+                        opacity: 1;
+                        overflow: visible;
+                    }
+                }
+            }
+    
+            &:nth-child(1) {
+                top: 55%;
+                left: 20%;
+            }
+            &:nth-child(2) {
+                top: 75%;
+                left: 50%;
+            }
+            &:nth-child(3) {
+                top: 75%;
+                left: 80%;
+            }
+        }
+    }
+}
+
+.-red {
+    color: $red;
+}
+
+.-black {
+     color: $black;
 }

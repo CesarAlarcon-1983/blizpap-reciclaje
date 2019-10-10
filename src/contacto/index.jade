@@ -1,0 +1,25 @@
+extends ../_layouts/base
+
+block config
+  //- Correct base url pathing for this page
+  - var baseUrl = '../';
+
+block content
+    main.contacto
+        .contacto__container
+            h2.contacto__title hablemos
+            p.contacto__text lorem ipsum
+            form.contacto__form
+                .contacto__form__group
+                    input.contacto__form__input(placeholder="nombre")
+                .contacto__form__group
+                    input.contacto__form__input(placeholder="e-mail")
+                .contacto__form__group
+                    input.contacto__form__input(placeholder="país")
+                .contacto__form__group
+                    input.contacto__form__input(placeholder="ciudad")
+                .contacto__form__group.contacto__form__group--textarea
+                    textarea.contacto__form__textarea(placeholder="mensaje")
+                .contacto__form__group.contacto__form__group--button
+                    span
+                    button.contacto__form__button enviar

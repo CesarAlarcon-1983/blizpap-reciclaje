@@ -1,0 +1,61 @@
+extends ../_layouts/base
+
+include ../_modules/slider/slider
+
+block config
+  //- Correct base url pathing for this page
+  - var baseUrl = '../';
+
+block content
+    main.creaciones
+        h2.creaciones__section-title creaciones
+        section.creaciones__hero
+            .creaciones__hero__left-hand
+                img(src="/images/reciclado/creaciones-left-hand.png")
+            .creaciones__hero__right-hand
+                img(src="/images/reciclado/creaciones-right-hand.png")
+            h3.creaciones__hero__title auto con techo
+            .creaciones__hero__container
+                +slider('creaciones__hero__slider', 'normal')
+                    .creaciones__hero__slide
+                        iframe(src="https://www.youtube.com/embed/5RiyftkKNkA")
+                    .creaciones__hero__slide
+                        iframe(src="https://www.youtube.com/embed/5RiyftkKNkA")
+                p.creaciones__hero__text inspírate en esta maravillosa creación y conviertete en un gran piloto bilz & pap
+                a.creaciones__hero__scroll-button(href="#materiales")
+                    i.fa.fa-arrow-down
+                    p ver los<br>materiales
+        section.creaciones__materiales#materiales
+            h3.creaciones__materiales__title meteriales
+            .creaciones__materiales__bottom-hand
+                img(src="/images/reciclado/creaciones-bottom-hand.png")
+            .creaciones__materiales__container
+                .creaciones__materiales__material
+                    img(src="/images/reciclado/creaciones-icon-1.png")
+                    p 8 botellas de 500cc bilz & pap zero, 1 botella de 350cc
+                .creaciones__materiales__material
+                    img(src="/images/reciclado/creaciones-icon-2.png")
+                    p plumones
+                .creaciones__materiales__material
+                    img(src="/images/reciclado/creaciones-icon-3.png")
+                    p pincel
+                .creaciones__materiales__material
+                    img(src="/images/reciclado/creaciones-icon-4.png")
+                    img.-warning(src="/images/reciclado/creaciones-warning-icon.png")
+                    p pistola de silicona
+                .creaciones__materiales__material
+                    img(src="/images/reciclado/creaciones-icon-5.png")
+                    p 4 palitos de brocheta
+                .creaciones__materiales__material
+                    img(src="/images/reciclado/creaciones-icon-6.png")
+                    img.-warning(src="/images/reciclado/creaciones-warning-icon.png")
+                    p 1 clavo para hacer agujeros
+                .creaciones__materiales__material
+                    img(src="/images/reciclado/creaciones-icon-7.png")
+                    p 2 bombillas
+                .creaciones__materiales__material
+                    img(src="/images/reciclado/creaciones-icon-8.png")
+                    p pintura acrilica
+                .creaciones__materiales__warning
+                    img(src="/images/reciclado/creaciones-warning-icon.png")
+                    p recuerda utilizar los elementos marcados como peligrosos en compañia de un adulto
