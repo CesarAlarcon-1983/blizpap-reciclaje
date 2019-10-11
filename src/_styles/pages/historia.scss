@@ -1,0 +1,252 @@
+.historia {
+    padding: 20vh 0;
+    background: url('/images/diversion/historia-bg.jpg') no-repeat center top / cover;
+
+    &__title {
+        color: $white;
+        font-family: $altFont;
+        text-transform: uppercase;
+        font-size: 60px;
+        text-align: center;
+        margin: 0;
+
+        @include mq(md) {
+            font-size: 120px;
+        }
+    }
+
+    &__text {
+        color: $white;
+        font-family: $altFont;
+        text-transform: uppercase;
+        font-size: 18px;
+        text-align: center;
+        margin: 0;
+        margin-bottom: 20px;
+
+        @include mq(md) {
+            font-size: 24px;
+        }
+    }
+
+    &__container {
+        margin-top: 150px;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        padding-top: 100px;
+        padding-bottom: 50px;
+        margin-bottom: 100px;
+
+        @include mq(md) {
+            width: 70%;
+            padding-top: 200px;
+            padding-bottom: 50px;
+        }
+
+        &:after {
+            content: '';
+            width: 2px;
+            background: $yellow;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 0;
+        }
+    }
+
+    &__arrow-down {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: $yellow;
+        top: -25px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
+    }
+
+    &__group {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        align-items: center;
+        margin-bottom: 40px;
+        
+        @include mq(md) {
+            margin-bottom: 80px;
+        }
+
+        &:after {
+            position: absolute;
+            content: '';
+            width: 0;
+            height: 0;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            top: 50%;
+            transform: translate3d(-50%, -50%, 0);
+
+            @include mq(md) {
+                border-top: 20px solid transparent;
+                border-bottom: 20px solid transparent;
+            }
+        }
+    
+        &:nth-child(even) {
+            &:after {
+                border-left: 10px solid $yellow;
+                border-right: 10px solid transparent;
+                left: calc(50% + 10px);
+
+                @include mq(md) {
+                    border-left: 20px solid $yellow;
+                    border-right: 20px solid transparent;
+                    left: calc(50% + 21px);
+                }
+            }
+        }
+
+        &:nth-child(odd) {
+            flex-direction: row-reverse;
+
+            .historia__group-image {
+                img {
+                    margin-right: auto;
+                    margin-left: 0;
+                }
+            }
+
+            &:after {
+                border-left: 10px solid transparent;
+                border-right: 10px solid $yellow;
+                left: calc(50% - 10px);
+
+                @include mq(md) {
+                    border-left: 20px solid transparent;
+                    border-right: 20px solid $yellow;
+                    left: calc(50% - 21px);
+                }
+            }
+        }
+    }
+
+    &__group-image {
+        width: 45%;
+
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+            margin-left: auto;
+
+            @include mq(md) {
+                height: 300px;
+                width: auto;
+            }
+        }
+    }
+
+    &__group-text {
+        width: 45%;
+        background: $white;
+        position: relative;
+        // height: 150px;
+        display: flex;
+        align-items: center;
+        border-radius: 10px;
+        padding: 40px 15px 15px;
+
+        @include mq(md) {
+            padding: 0 40px;
+            height: 150px;
+        }
+
+        span {
+            position: absolute;
+            top: -30px;
+            left: 20px;
+            font-size: 40px;
+            font-family: $altFont;
+            background: $yellow;
+            padding: 5px 20px;
+            color: $darkestGray;
+
+            &.-red {
+                background: $red;
+                color: $white;
+            }
+        }
+
+        p {
+            color: $black;
+            font-family: $altFont;
+            text-transform: uppercase;
+            font-size: 14px;
+            margin: 0;
+
+            @include mq(md) {
+                font-size: 18px;
+            }
+        }
+    }
+
+    &__bottom-text {
+        position: absolute;
+        bottom: -60px;
+        background: $white;
+        left: 50%;
+        transform: translateX(-50%);
+        color: $blue;
+        text-transform: uppercase;
+        font-family: $altFont;
+        font-size: 16px;
+        white-space: nowrap;
+        height: 60px;
+        line-height: 60px;
+        padding: 0 40px;
+        border-radius: 20px;
+        z-index: 2;
+
+        @include mq(md) {
+            font-size: 30px;
+            height: 80px;
+            line-height: 80px;
+        }
+    }
+
+    &__resume {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+
+        @include mq(md) {
+            width: 70%;
+            padding-bottom: 800px;
+        }
+    }
+
+    &__resume-container {
+        width: 100%;
+
+        @include mq(md) {
+            width: 45%;
+        }
+
+        p {
+            color: $white;
+            font-family: $altFont;
+        }
+    }
+}

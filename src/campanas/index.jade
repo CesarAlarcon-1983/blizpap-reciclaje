@@ -2,7 +2,17 @@ extends ../_layouts/base
 
 block config
   //- Correct base url pathing for this page
-  - var baseUrl = '../'
+  - var baseUrl = '../';
+
+include ../_modules/slider/slider
 
 block content
-  p campañas page
+    main.campanas
+        .campanas__container
+            +slider('campanas__slider', 'normal')
+                .campanas__slide
+                    iframe(src="https://www.youtube.com/embed/5RiyftkKNkA")
+                .campanas__slide
+                    iframe(src="https://www.youtube.com/embed/5RiyftkKNkA")
+                .campanas__slide
+                    iframe(src="https://www.youtube.com/embed/5RiyftkKNkA")

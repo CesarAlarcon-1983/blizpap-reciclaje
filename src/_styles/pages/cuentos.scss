@@ -1,3 +1,288 @@
 .cuentos {
-    
+    background: url('/images/diversion/cuentos-back.jpg') no-repeat center center / cover;
+    padding-top: 20vh;
+
+    &__cuento {
+        padding-bottom: 200px;
+
+        &__container {
+            width: 70%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        &__image {
+            width: 80%;
+            margin-right: auto;
+            margin-left: auto;
+            position: relative;
+            height: 400px;
+
+            img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate3d(-50%, -50%, 0);
+                width: auto;
+                height: 100%;
+
+                &.-placeholder {
+                    height: 87%;
+                    top: 46%
+                }
+            }
+
+        }
+
+        &__fogata {
+            margin-bottom: 40px;
+            img {
+                display: block;
+                width: 50%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+        &__slide {
+            padding: 0 10px;
+        }
+
+        .slick-slider {
+            margin-bottom: 0 !important;
+        }
+
+        .slick-dots {
+            display: none !important;
+        }
+
+        .slick-prev {
+            left: -100px;
+            top: 40%;
+        }
+
+        .slick-next {
+            right: -100px;
+            top: 40%;
+        }
+
+        &__slide-image {
+            width: 100%;
+            height: 0;
+            padding-bottom: 80%;
+            background: $darkYellow;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+
+            img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate3d(-50%, -50%, 0);
+                width: 40%;
+                height: auto;
+            }
+        }
+
+        &__text {
+            text-align: center;
+            font-size: 18px;
+            text-transform: uppercase;
+            color: $white;
+            font-family: $altFont;
+        }
+    }
+
+    &__participar {
+        margin-top: -20vh;
+        padding-top: 30vh;
+
+        &__title,
+        &__text {
+            color: $white;
+            font-size: 60px;
+            text-transform: uppercase;
+            text-align: center;
+            font-family: $altFont;
+            margin: 0;
+        }
+
+        &__text {
+            font-size: 26px;
+            margin-bottom: 40px;            
+        }
+
+        &__form {
+            width: 60%;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            position: relative;
+            padding-bottom: 100px;
+        }
+
+
+        &__group {
+            width: 49%;
+            margin-bottom: 15px;
+
+            &--textarea {
+                width: 100%;
+            }
+
+            &--blue {
+                border-radius: 5px;
+                width: 100%;
+                height: 80px;
+                background: $blue;
+                display: flex;
+                justify-content: space-between;
+                padding: 0 40px;
+                align-items: center;
+
+                p {
+                    color: $white;
+                    text-transform: uppercase;
+                    font-size: 14px;
+                    font-family: $altFont;
+                }
+            }
+        }
+
+        &__input {
+            width: 100%;
+            height: 50px;
+            border: none;
+            border-radius: 5px;
+            text-transform: uppercase;
+            font-size: 12px;
+            padding: 20px;
+            color: $darkestGray;
+            font-weight: 900;
+
+            &--textarea {
+                height: 200px;
+                resize: none;
+            }
+
+            &--file {
+                position: absolute;
+                left: -9999px;
+            }
+        }
+
+        &__label {
+            display: block;
+            height: 50px;
+            line-height: 50px;
+            background: $red;
+            border-radius: 5px;
+            padding: 0 40px;
+            color: $white;
+            text-transform: uppercase;
+            font-weight: 900;
+            cursor: pointer;
+        }
+    }
+
+    &__gallery {
+        padding-bottom: 100px;
+
+        &__title {
+            color: $white;
+            font-size: 60px;
+            text-transform: uppercase;
+            text-align: center;
+            font-family: $altFont;
+            margin: 0;
+            margin-bottom: 40px;
+        }
+
+        &__container {
+            width: calc(100% - 160px);
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__slider {
+            width: 100%;
+        }
+
+        .slick-slide {
+            padding: 0 15px;
+        }
+
+        .slick-dots {
+            bottom: -50px;
+
+            .slick-active {
+
+                button {
+                    &:before {
+                        color: $red;
+                        font-size: 18px;
+                    }
+                }
+            }
+            li {
+                button {
+                    &:before {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+        &__idea {
+            background: $white;
+            padding: 20px;
+        }
+
+        &__image {
+            width: 100%;
+            height: 0;
+            position: relative;
+            padding-bottom: 100%;
+            overflow: hidden;
+            margin-bottom: 20px;
+
+            img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate3d(-50%,-50%, 0);
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        &__idea-title {
+            margin: 0;
+            text-transform: uppercase;
+            text-align: center;
+            font-family: $altFont;
+            margin-bottom: 10px;
+        }
+
+        &__idea-name {
+            color: $darkestGray;
+            text-transform: uppercase;
+            font-family: $altFont;
+            margin: 0;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        &__idea-text {
+            font-family: $mainFont;
+            margin: 0;
+            font-weight: 100;
+            text-align: center;
+        }
+    }
 }

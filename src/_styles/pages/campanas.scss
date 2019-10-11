@@ -1,0 +1,51 @@
+.campanas {
+    height: 100vh;
+    background: url('/images/reciclado/tips-bg.jpg') no-repeat center center / cover;
+    position: relative;
+
+    &__container {
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0);
+        z-index: 3;
+        width: 45%;
+        padding: 20px;
+        background: $yellow;
+        border-radius: 10px; 
+    }
+
+    &__slider {
+        width: 100%;
+    }
+
+    .slick-slide,
+    .slick-list {
+        width: 100%;
+    }
+
+    .slick-prev {
+        left: -100px;
+    }
+
+    .slick-next {
+        right: -100px;
+    }
+
+    &__slide {
+        height: 0;
+        padding-bottom: 56.5%;
+        overflow: hidden;
+        width: 100%;
+        position: relative;
+
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    }
+}
