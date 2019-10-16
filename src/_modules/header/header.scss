@@ -82,24 +82,42 @@
     }
 
     &__item {
+        @include trans;
+        
         background: $darkYellow;
-        padding: 10px 30px;
         border-radius: 50px;
         text-align: center;
         margin: 20px 0;
-
+        height: 40px;
+        
         @include mq(md) {
             margin: 0;
             margin-left: 20px;
         }
 
+
+        &:hover {
+            background: $darkYellow + #333;
+            transform: scale3d(1.05, 1.05, 1.05);
+            
+            a {
+                color: $red;
+            }
+        }
+        
         a {
+            @include trans;
+
+            padding: 10px 30px;
+            height: 40px;
+            line-height: 40px;
             text-decoration: none;
             text-transform: uppercase;
             color: $black;
             font-weight: 500;
             font-size: 16px;
             font-family: $altFont;
+            white-space: nowrap;
         }
     }
 

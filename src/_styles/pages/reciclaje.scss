@@ -74,7 +74,7 @@
             width: 67%;
             margin-left: auto;
             margin-right: auto;
-            font-weight: 700;
+            font-weight: 500;
             font-size: 14px;
 
             @include mq(md) {
@@ -145,7 +145,7 @@
         &__text {
             text-transform: uppercase;
             color: $white;
-            font-weight: 700;
+            font-weight: 500;
             font-family: $altFont;
             font-size: 20px;
             margin: 0;
@@ -260,7 +260,7 @@
         &__text {
             text-transform: uppercase;
             color: $white;
-            font-weight: 700;
+            font-weight: 500;
             font-family: $altFont;
             margin: 0;
             margin-bottom: 40px;
@@ -383,7 +383,7 @@
         &__text {
             text-transform: uppercase;
             color: $white;
-            font-weight: 700;
+            font-weight: 500;
             font-family: $altFont;
             font-size: 20px;
             margin: 0;
@@ -499,7 +499,7 @@
         &__text {
             text-transform: uppercase;
             color: $white;
-            font-weight: 700;
+            font-weight: 500;
             font-family: $altFont;
             font-size: 20px;
             margin: 0;

@@ -28,7 +28,7 @@ a {
     transition: all $duration $easingLight;
 
     &:hover{
-        color:$linkHover;
+        color:$red;
         text-decoration: none;
     }
 }
