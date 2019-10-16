@@ -316,6 +316,7 @@
         min-height: 100vh;
         padding: 0 15px;
         padding-bottom: 50px;
+        position: relative;
         
         @include mq(md) {
             padding-bottom: 0;
@@ -328,6 +329,7 @@
 
         &__container {
             width: 100%;
+            
 
             &--left {
                 margin-bottom: 40px;
@@ -543,5 +545,13 @@
                 font-weight: 500;
             }
         }
+    }
+
+    &__idea-mano {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      width: 20%;
+      max-width: 300px;
     }
 }

@@ -18,9 +18,9 @@ block content
                     span descubrir otro mundo
             +slider('home__hero__slider', 'normal')
                 .home__hero__slide
-                    img.-align-left(src="/images/home/left-hand.png")
-                    img.-align-right(src="/images/home/right-hand.png")
-                    .home__hero__container
+                    img.wow.fadeInLeft.-align-left(src="/images/home/left-hand.png")
+                    img.wow.fadeInRight.-align-right(src="/images/home/right-hand.png")
+                    .home__hero__container.wow.fadeInUpBig
                         h2.home__hero__title ¡Bienvenidos a un sitio de otro mundo!
                         p.home__hero__text diviértete en familia con ideas de otro mundo
                 .home__hero__slide.-second
@@ -40,7 +40,7 @@ block content
                             p conocelos aquí
         
         section.home__reciclaje#reciclaje
-            h3.home__reciclaje__title reciclaje
+            h3.home__reciclaje__title.wow.bounceInRight reciclaje
             .home__reciclaje__tooltips
                 a.home__reciclaje__tooltip(href="/reciclaje")
                     img.-close(src="/images/home/tooltip.png")
@@ -58,7 +58,7 @@ block content
                     img.-close(src="/images/home/tooltip.png")
                     img.-open(src="/images/home/tooltip-abierto.png")
         section.home__diversion
-            h3.home__diversion__title diversion
+            h3.home__diversion__title.wow.bounceInRight diversion
             .home__diversion__tooltips
                 a.home__diversion__tooltip(href="/diversion")
                     img.-close(src="/images/home/tooltip.png")
@@ -77,7 +77,7 @@ block content
                     img.-open(src="/images/home/tooltip-abierto.png")
 
         section.home__mundo
-            h3.home__mundo__title mundo
+            h3.home__mundo__title.wow.bounceInRight mundo
             .home__mundo__tooltips
                 a.home__mundo__tooltip(href="/mundo")
                     img.-close(src="/images/home/tooltip.png")

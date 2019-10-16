@@ -1,20 +1,26 @@
-.ideas {
+  .ideas {
     &__hero {
         height: 120vh;
-        background: url('/images/reciclado/idea-hero-bg.jpg') no-repeat center top / cover;
+        background: #7ccee6 url('/images/reciclado/idea-hero-bg.jpg') no-repeat center bottom / 150%;
         padding-left: 15px;
         padding-right: 15px;
         display: flex;
-        align-items: center;
+        align-items: flex-start;
 
         @include mq(md) {
+          align-items: center;
             padding-left: 80px;
+
+            background: url('/images/reciclado/idea-hero-bg.jpg') no-repeat left top / cover;
         }
 
         &__container {
             width: 100%;
+            position: relative;
+            top: 18%;
 
             @include mq(md) {
+                top: 0;
                 width: 40%;
             }
         }
@@ -90,8 +96,13 @@
     }
 
     &__participar {
-        margin-top: -20vh;
-        padding-top: 30vh;
+        margin-top: -50vh;
+        padding-top: 50vh;
+
+        @include mq(md) {
+          margin-top: -25vh;
+          padding-top: 30vh;
+        }
 
         &__title,
         &__text {
@@ -109,7 +120,7 @@
         }
 
         &__form {
-            width: 60%;
+            padding: 0 15px;
             margin-left: auto;
             margin-right: auto;
             display: flex;
@@ -118,11 +129,28 @@
             position: relative;
             margin-bottom: 50px;
 
+            @include mq(md) {
+              width: 60%;
+            }
+
             img {
                 position: absolute;
                 left: 50%;
                 top: 10%;
                 transform: translate3d(-50%, -50%, 0);
+                pointer-events: none;
+                display: none;
+
+                @include mq(md) {
+                  display: block;
+                }
+            }
+
+            input,
+            textarea {
+              font-family: $altFont;
+              font-weight: 500;
+              font-size: 16px;
             }
         }
 
@@ -138,18 +166,19 @@
             &--blue {
                 border-radius: 5px;
                 width: 100%;
-                height: 80px;
                 background: $blue;
                 display: flex;
                 justify-content: space-between;
-                padding: 0 40px;
+                padding: 20px 40px;
                 align-items: center;
+                flex-wrap: wrap;
 
                 p {
                     color: $white;
                     text-transform: uppercase;
                     font-size: 14px;
                     font-family: $altFont;
+                    margin: 0 0 15px;
                 }
             }
         }
@@ -163,7 +192,7 @@
             font-size: 12px;
             padding: 20px;
             color: $darkestGray;
-            font-weight: 900;
+            font-weight: 500;
 
             &--textarea {
                 height: 200px;
@@ -185,34 +214,58 @@
             padding: 0 40px;
             color: $white;
             text-transform: uppercase;
-            font-weight: 900;
+            font-weight: 500;
             cursor: pointer;
         }
     }
 
     &__gallery {
-        padding-bottom: 100px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+
+        @include mq(md){
+          padding-top: 100px;
+          padding-bottom: 100px;
+        }
 
         &__title {
             color: $red;
-            font-size: 60px;
+            font-size: 36px;
             text-transform: uppercase;
             text-align: center;
             font-family: $altFont;
             margin: 0;
             margin-bottom: 40px;
+
+            @include mq(md){
+              font-size: 60px;
+            }
         }
 
         &__container {
-            width: calc(100% - 160px);
-            margin-left: auto;
-            margin-right: auto;
-            display: flex;
-            justify-content: space-between;
+          padding: 0 15px;
+          margin-left: auto;
+          margin-right: auto;
+          
+          @include mq(md){
+              width: calc(100% - 160px);
+              display: flex;
+              justify-content: space-between;
+            }
         }
 
         &__slider {
             width: 100%;
+        }
+
+        &__slide {
+          margin-bottom: 30px;
+
+          &:not(:last-child) {
+            @include mq(md) {
+              margin-right: 15px;
+            }
+          }
         }
 
         .slick-slide {
@@ -243,6 +296,7 @@
         &__idea {
             background: $white;
             padding: 20px;
+            border-radius: 5px;
         }
 
         &__image {
@@ -285,6 +339,30 @@
             margin: 0;
             font-weight: 100;
             text-align: center;
+        }
+
+        &__paginate{
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+          margin-top: 50px;
+
+          li {
+            margin: 0 5px;
+          }
+
+          a {
+            display: flex;
+            width: 32px;
+            height: 32px;
+            background: $white;
+            color: $black;
+            font-size: 14px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 3px;
+            text-decoration: none;
+          }
         }
     }
 }

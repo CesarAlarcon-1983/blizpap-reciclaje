@@ -12,7 +12,7 @@ var Slider = function() {
                 fade: true,
                 arrows: true,
                 infinite: true,
-                autoplay: false
+                autoplay: true
             });
         });
     }

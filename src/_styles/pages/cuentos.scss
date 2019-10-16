@@ -6,9 +6,13 @@
         padding-bottom: 200px;
 
         &__container {
-            width: 70%;
+            
             margin-left: auto;
             margin-right: auto;
+
+            @include mq(md) {
+              width: 70%;
+            }
         }
 
         &__image {
@@ -16,7 +20,12 @@
             margin-right: auto;
             margin-left: auto;
             position: relative;
-            height: 400px;
+            height: 0;
+            padding-bottom: 50%;
+
+            @include mq(md) {
+              width: 80%;
+            }
 
             img {
                 position: absolute;
@@ -114,7 +123,7 @@
         }
 
         &__form {
-            width: 60%;
+            padding: 0 15px;
             margin-left: auto;
             margin-right: auto;
             display: flex;
@@ -122,6 +131,17 @@
             flex-wrap: wrap;
             position: relative;
             padding-bottom: 100px;
+
+            @include mq(md) {
+              width: 60%;
+            }
+
+            input,
+            textarea {
+              font-family: $altFont;
+              font-weight: 500;
+              font-size: 16px;
+            }
         }
 
 
@@ -134,21 +154,22 @@
             }
 
             &--blue {
-                border-radius: 5px;
-                width: 100%;
-                height: 80px;
-                background: $blue;
-                display: flex;
-                justify-content: space-between;
-                padding: 0 40px;
-                align-items: center;
+              border-radius: 5px;
+              width: 100%;
+              background: $blue;
+              display: flex;
+              justify-content: space-between;
+              padding: 20px 40px;
+              align-items: center;
+              flex-wrap: wrap;
 
-                p {
-                    color: $white;
-                    text-transform: uppercase;
-                    font-size: 14px;
-                    font-family: $altFont;
-                }
+              p {
+                  color: $white;
+                  text-transform: uppercase;
+                  font-size: 14px;
+                  font-family: $altFont;
+                  margin: 0 0 15px;
+              }
             }
         }
 
@@ -161,7 +182,7 @@
             font-size: 12px;
             padding: 20px;
             color: $darkestGray;
-            font-weight: 900;
+            font-weight: 500;
 
             &--textarea {
                 height: 200px;
@@ -183,106 +204,156 @@
             padding: 0 40px;
             color: $white;
             text-transform: uppercase;
-            font-weight: 900;
+            font-weight: 500;
             cursor: pointer;
         }
     }
 
     &__gallery {
+        
+      padding-top: 50px;
+      padding-bottom: 50px;
+
+      @include mq(md){
+        padding-top: 100px;
         padding-bottom: 100px;
+      }
 
-        &__title {
-            color: $white;
+      &__title {
+          color: $red;
+          font-size: 36px;
+          text-transform: uppercase;
+          text-align: center;
+          font-family: $altFont;
+          margin: 0;
+          margin-bottom: 40px;
+
+          @include mq(md){
             font-size: 60px;
-            text-transform: uppercase;
-            text-align: center;
-            font-family: $altFont;
-            margin: 0;
-            margin-bottom: 40px;
-        }
+          }
+      }
 
-        &__container {
+      &__container {
+        padding: 0 15px;
+        margin-left: auto;
+        margin-right: auto;
+        
+        @include mq(md){
             width: calc(100% - 160px);
-            margin-left: auto;
-            margin-right: auto;
             display: flex;
             justify-content: space-between;
+          }
+      }
+
+      &__slider {
+          width: 100%;
+      }
+
+      &__slide {
+        margin-bottom: 30px;
+
+        &:not(:last-child) {
+          @include mq(md) {
+            margin-right: 15px;
+          }
+        }
+      }
+
+      .slick-slide {
+          padding: 0 15px;
+      }
+
+      .slick-dots {
+          bottom: -50px;
+
+          .slick-active {
+
+              button {
+                  &:before {
+                      color: $red;
+                      font-size: 18px;
+                  }
+              }
+          }
+          li {
+              button {
+                  &:before {
+                      opacity: 1;
+                  }
+              }
+          }
+      }
+
+      &__idea {
+          background: $white;
+          padding: 20px;
+          border-radius: 5px;
+      }
+
+      &__image {
+          width: 100%;
+          height: 0;
+          position: relative;
+          padding-bottom: 100%;
+          overflow: hidden;
+          margin-bottom: 20px;
+
+          img {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate3d(-50%,-50%, 0);
+              width: 100%;
+              height: auto;
+          }
+      }
+
+      &__idea-title {
+          margin: 0;
+          text-transform: uppercase;
+          text-align: center;
+          font-family: $altFont;
+          margin-bottom: 10px;
+      }
+
+      &__idea-name {
+          color: $darkestGray;
+          text-transform: uppercase;
+          font-family: $altFont;
+          margin: 0;
+          margin-bottom: 10px;
+          text-align: center;
+      }
+
+      &__idea-text {
+          font-family: $mainFont;
+          margin: 0;
+          font-weight: 100;
+          text-align: center;
+      }
+
+      &__paginate{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 50px;
+
+        li {
+          margin: 0 5px;
         }
 
-        &__slider {
-            width: 100%;
+        a {
+          display: flex;
+          width: 32px;
+          height: 32px;
+          background: $white;
+          color: $black;
+          font-size: 14px;
+          justify-content: center;
+          align-items: center;
+          border-radius: 3px;
+          text-decoration: none;
         }
-
-        .slick-slide {
-            padding: 0 15px;
-        }
-
-        .slick-dots {
-            bottom: -50px;
-
-            .slick-active {
-
-                button {
-                    &:before {
-                        color: $red;
-                        font-size: 18px;
-                    }
-                }
-            }
-            li {
-                button {
-                    &:before {
-                        opacity: 1;
-                    }
-                }
-            }
-        }
-
-        &__idea {
-            background: $white;
-            padding: 20px;
-        }
-
-        &__image {
-            width: 100%;
-            height: 0;
-            position: relative;
-            padding-bottom: 100%;
-            overflow: hidden;
-            margin-bottom: 20px;
-
-            img {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate3d(-50%,-50%, 0);
-                width: 100%;
-                height: auto;
-            }
-        }
-
-        &__idea-title {
-            margin: 0;
-            text-transform: uppercase;
-            text-align: center;
-            font-family: $altFont;
-            margin-bottom: 10px;
-        }
-
-        &__idea-name {
-            color: $darkestGray;
-            text-transform: uppercase;
-            font-family: $altFont;
-            margin: 0;
-            margin-bottom: 10px;
-            text-align: center;
-        }
-
-        &__idea-text {
-            font-family: $mainFont;
-            margin: 0;
-            font-weight: 100;
-            text-align: center;
-        }
+      }
     }
 }

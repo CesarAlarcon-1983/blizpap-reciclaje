@@ -1,6 +1,22 @@
 .contacto {
     padding-top: 150px;
-    background: $red;
+    background: $red url('/images/hablemos/bg.jpg') no-repeat center center / cover;
+
+    &__left,
+    &__right {
+      position: absolute;
+      top: 30%;
+      width: 25%;
+      max-width: 380px;
+    }
+
+    &__left {
+      left: 0;
+    }
+
+    &__right {
+      right: 0;
+    }
 
     &__container {
         margin-left: auto;
@@ -17,7 +33,7 @@
         text-transform: uppercase;
         text-align: center;
         color: $white;
-        font-weight: 900;
+        font-weight: 500;
         font-size: 40px;
         
         @include mq(md) {
@@ -30,7 +46,7 @@
         text-align: center;
         margin: 0;
         margin-bottom: 40px;
-        font-weight: 900;
+        font-weight: 500;
         color: $white;
         font-size: 20px;
     }
@@ -81,14 +97,15 @@
         &__input {
             width: 100%;
             height: 50px;
-            border-radius: 20px;
+            border-radius: 10px;
             margin-bottom: 15px;
             padding: 20px;
             text-transform: uppercase;
-            font-size: 12px;
-            font-weight: 900;
+            font-size: 16px;
+            font-weight: 500;
             border: 0;
             outline: none;
+            font-family: $altFont;
         }
 
         &__textarea {
@@ -97,11 +114,12 @@
             width: 100%;
             border-radius: 20px;
             text-transform: uppercase;
-            font-size: 12px;
-            font-weight: 900;
+            font-size: 16px;
+            font-weight: 500;
             margin-bottom: 20px;
             border: 0;
             outline: none;
+            font-family: $altFont;
         }
 
         &__button {
@@ -115,7 +133,9 @@
             border: none;
             text-transform: uppercase;
             font-size: 18px;
-            font-weight: 900;
+            font-weight: 500;
+            font-family: $altFont;
+            cursor: pointer;
         }
     }
 }
