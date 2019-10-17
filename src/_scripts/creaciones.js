@@ -191,10 +191,13 @@ var Creaciones = function() {
     var arrowPrev = $('.-js-arrow-prev');
     var sliderVideo = $('.-js-slider-video');
     var sliderOverlay = $('.-js-slider-overlay');
+    var thumbnailPrev = $('.-thumbnail-prev');
+    var thumbnailNext = $('.-thumbnail-next');
 
     arrowNext.on('click', function() {
+        activeCreation++
+        console.log(activeCreation)
         if(activeCreation < creaciones.length) {
-            activeCreation++
             $('.creaciones__materiales__material').remove()
             sliderTitle.html(creaciones[activeCreation].title);
             sliderText.html(creaciones[activeCreation].text);
@@ -202,11 +205,22 @@ var Creaciones = function() {
             $('.icon-play').removeClass('-close')
             sliderVideo.removeClass('-active');
             createMaterialesHtml(activeCreation);
+            arrowPrev.removeClass('-disabled');
+            thumbnailPrev.attr('src', creaciones[(activeCreation - 1)].overlay)
+        }
+ 
+        if(activeCreation + 1 < creaciones.length) {
+            thumbnailNext.attr('src', creaciones[(activeCreation + 1)].overlay)
         }
 
+        if(activeCreation === creaciones.length - 1) {
+            arrowNext.addClass('-disabled');
+            return
+        }
     })
     
     arrowPrev.on('click', function() {
+        console.log(activeCreation)
         if(activeCreation > 0) {
             activeCreation--
             $('.creaciones__materiales__material').remove()
@@ -216,6 +230,17 @@ var Creaciones = function() {
             sliderOverlay.attr("src", creaciones[activeCreation].overlay);
             $('.icon-play').removeClass('-close');
             sliderVideo.removeClass('-active');
+            arrowNext.removeClass('-disabled');
+            thumbnailNext.attr('src', creaciones[(activeCreation + 1)].overlay)
+        } 
+
+        if(activeCreation > 0) {
+            thumbnailPrev.attr('src', creaciones[(activeCreation - 1)].overlay)
+        }
+
+        if(activeCreation === 0) {
+            arrowPrev.addClass('-disabled');
+            return
         }
     })
 
@@ -223,6 +248,9 @@ var Creaciones = function() {
     sliderVideo.attr("src", creaciones[0].url);
     sliderOverlay.attr("src", creaciones[0].overlay);
     sliderText.html(creaciones[0].text);
+    arrowPrev.addClass('-disabled');
+    thumbnailNext.attr('src', creaciones[1].overlay)
+    thumbnailPrev.attr('src', creaciones[0].overlay)
     
     sliderOverlay.on('click', function() {
         sliderVideo.addClass('-active');
