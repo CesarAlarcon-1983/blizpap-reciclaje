@@ -8,9 +8,11 @@ global.$ = global.jQuery;
 
 var Header = require('../_modules/header/header');
 var Slider = require('../_modules/slider/slider');
+var Creaciones = require('./creaciones');
 
 $(function() {
 
     new Header();
+    new Creaciones();
     new Slider();
 });

@@ -12,57 +12,38 @@ block content
             .cuentos__cuento__container
                 .cuentos__cuento__image
                     img.-container(src="/images/diversion/cuentos-container.png")
-                    img.-placeholder(src="/images/diversion/cuentos-placeholder.jpg")
+                    img.-placeholder(src="/images/cuentos/cuento-1.jpg" data-content="cuento1")
+                    img.-placeholder(src="/images/cuentos/cuento-2.png" data-content="cuento2")
+                    img.-placeholder(src="/images/cuentos/cuento-3.png" data-content="cuento3")
+                    img.-placeholder(src="/images/cuentos/cuento-4.png" data-content="cuento4")
+                    img.-placeholder(src="/images/cuentos/cuento-5.png" data-content="cuento5")
+                    img.-placeholder(src="/images/cuentos/cuento-6.png" data-content="cuento6")
                 .cuentos__cuento__fogata
                     img(src="/images/diversion/cuentos-fogata.png")
                 +slider('cuentos__cuento__slider', 'multi')
-                    .cuentos__cuento__slide
+                    .cuentos__cuento__slide(data-target="cuento1")
                         .cuentos__cuento__slide-image
-                            img(src="/images/diversion/cuentos-icon-1.png")
+                            img(src="/images/cuentos/cuento-1-icon.png")
+                        p.cuentos__cuento__text maik y las escaleras
+                    .cuentos__cuento__slide(data-target="cuento2")
+                        .cuentos__cuento__slide-image
+                            img(src="/images/cuentos/cuento-2-icon.png")
+                        p.cuentos__cuento__text la casa de arecio
+                    .cuentos__cuento__slide(data-target="cuento3")
+                        .cuentos__cuento__slide-image
+                            img(src="/images/cuentos/cuento-3-icon.png")
                         p.cuentos__cuento__text preguntónimo
-                    .cuentos__cuento__slide
+                    .cuentos__cuento__slide(data-target="cuento4")
                         .cuentos__cuento__slide-image
-                            img(src="/images/diversion/cuentos-icon-2.png")
+                            img(src="/images/cuentos/cuento-4-icon.png")
                         p.cuentos__cuento__text el flautista de pulmahue
-                    .cuentos__cuento__slide
+                    .cuentos__cuento__slide(data-target="cuento5")
                         .cuentos__cuento__slide-image
-                            img(src="/images/diversion/cuentos-icon-3.png")
+                            img(src="/images/cuentos/cuento-5-icon.png")
                         p.cuentos__cuento__text el gigante yoyo
-                    .cuentos__cuento__slide
+                    .cuentos__cuento__slide(data-target="cuento6")
                         .cuentos__cuento__slide-image
-                            img(src="/images/diversion/cuentos-icon-4.png")
-                        p.cuentos__cuento__text rey sapo
-                    .cuentos__cuento__slide
-                        .cuentos__cuento__slide-image
-                            img(src="/images/diversion/cuentos-icon-1.png")
-                        p.cuentos__cuento__text preguntónimo
-                    .cuentos__cuento__slide
-                        .cuentos__cuento__slide-image
-                            img(src="/images/diversion/cuentos-icon-2.png")
-                        p.cuentos__cuento__text el flautista de pulmahue
-                    .cuentos__cuento__slide
-                        .cuentos__cuento__slide-image
-                            img(src="/images/diversion/cuentos-icon-3.png")
-                        p.cuentos__cuento__text el gigante yoyo
-                    .cuentos__cuento__slide
-                        .cuentos__cuento__slide-image
-                            img(src="/images/diversion/cuentos-icon-4.png")
-                        p.cuentos__cuento__text rey sapo
-                    .cuentos__cuento__slide
-                        .cuentos__cuento__slide-image
-                            img(src="/images/diversion/cuentos-icon-1.png")
-                        p.cuentos__cuento__text preguntónimo
-                    .cuentos__cuento__slide
-                        .cuentos__cuento__slide-image
-                            img(src="/images/diversion/cuentos-icon-2.png")
-                        p.cuentos__cuento__text el flautista de pulmahue
-                    .cuentos__cuento__slide
-                        .cuentos__cuento__slide-image
-                            img(src="/images/diversion/cuentos-icon-3.png")
-                        p.cuentos__cuento__text el gigante yoyo
-                    .cuentos__cuento__slide
-                        .cuentos__cuento__slide-image
-                            img(src="/images/diversion/cuentos-icon-4.png")
+                            img(src="/images/cuentos/cuento-6-icon.png")
                         p.cuentos__cuento__text rey sapo
         section.cuentos__participar
             h2.cuentos__participar__title ¡participa!

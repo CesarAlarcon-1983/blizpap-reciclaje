@@ -22,6 +22,19 @@ var Header = function() {
         }
     })
 
+    var contents = $('[data-content]');
+    var targets = $('[data-target]');
+
+    contents.first().addClass('-active');
+
+    targets.on('click', function() {
+        contents.removeClass('-active');
+
+        var index = targets.index($(this));
+        $(contents[index]).addClass('-active');
+    })
+
+    console.log(contents);
     var viewport = 0;
     var scroll = 0;
 

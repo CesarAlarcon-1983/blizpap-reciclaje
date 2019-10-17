@@ -60,13 +60,15 @@
             position: absolute;
             top: 30%;
             left: 50%;
+            width: 800px;
+            max-width: 70%;
             transform: translateX(-50%);
             margin: 0;
             text-transform: uppercase;
             color: $red;
             font-size: 30px;
             font-family: $altFont;
-            white-space: nowrap;
+            text-align: center;
 
             @include mq(md) {
                 top: 15%;
@@ -92,45 +94,60 @@
             height: 100%;
         }
 
-        .slick-slide,
-        .slick-track,
-        .slick-list {
-            height: 100% !important;
+        &__arrow-prev,
+        &__arrow-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: -100px;
+            width: 50px;
+            height: 50px;
 
-            > div {
-                height: 100% !important;
+            img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate3d(-50%, -50%, 0);
             }
         }
 
-        // .slick-slide {
-        //     // width: 100% !important;
-
-        //     @include mq(md) {
-        //         width: auto;
-        //     }
-        // }
-
-        .slick-prev {
-            left: -200px;
-        }
-
-        .slick-next {
-            right: -200px;
-        }
-
-        .slick-dots {
-            display: none !important;
+        &__arrow-next {
+            right: -100px;
+            left: auto;
         }
 
         &__slide {
             position: relative;
             height: 100%;
+            overflow: hidden;
+            cursor: pointer;
+
 
             iframe {
+                @include trans;
+
                 position: absolute;
                 top: 0;
                 left: 0;
                 width: 100%;
+                height: 100%;
+                opacity: 0;
+                pointer-events: none;
+
+                &.-active {
+                    opacity: 1;
+                    pointer-events: all;
+                }
+            }
+
+            img {
+                @include trans;
+                
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate3d(-50%, -50%, 0);
+                width: auto;
                 height: 100%;
             }
         }
@@ -189,6 +206,7 @@
         @include mq(md) {
             margin-top: -200px;
             padding-top: 200px;
+            padding-bottom: 100px;
         }
 
         &__bottom-hand {
@@ -225,17 +243,16 @@
         }
 
         &__container {
-            width: 90%;
             margin-right: auto;
             margin-left: auto;
             display: flex;
             flex-wrap: wrap;
-            padding-bottom: 300px;
+            margin-bottom: 40px;
             pointer-events: all;
+            width: 90%;
 
             @include mq(md) {
                 width: 60%;
-                padding-bottom: 150px;
             }
         }
 
@@ -244,9 +261,13 @@
             padding: 0 10px;
             margin-bottom: 40px;
             position: relative;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
             
             @include mq(md) {
                 width: 25%;
+                min-height: 100px;
             }
 
             img {
@@ -281,7 +302,7 @@
         }
 
         &__warning {
-            min-width: 80%;
+            width: 90%;
             border-radius: 50px;
             display: flex;
             align-items: center;
@@ -293,6 +314,7 @@
 
             @include mq(md) {
                 height: 60px;
+                width: 60%;
             }
 
             img {
@@ -320,3 +342,31 @@
         }
     }
 }
+
+.icon-play {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 124px;
+    height: 124px;
+    line-height: 1.6em;
+    z-index: 2;
+    margin: -62px 0 0 -62px;
+    border: 15px solid #FFF;
+    color: #FFF;
+    border-radius: 50%;
+    font-size: 4em;
+    text-align: center;
+    text-indent: 5px;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    pointer-events: none;
+    
+    &.-close {
+        opacity: 0;
+    }
+}
+

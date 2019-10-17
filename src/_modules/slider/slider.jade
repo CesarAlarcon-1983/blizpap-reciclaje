@@ -3,6 +3,10 @@ mixin slider(klass, mode)
         ._slidermulti(class=klass)
             if block
                 block
+    if mode == 'multi3'
+        ._slidermulti3(class=klass)
+            if block
+                block
     if mode == 'normal'
         ._slider(class=klass)
             if block

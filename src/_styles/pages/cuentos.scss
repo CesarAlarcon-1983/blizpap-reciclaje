@@ -34,10 +34,15 @@
                 transform: translate3d(-50%, -50%, 0);
                 width: auto;
                 height: 100%;
-
+                
                 &.-placeholder {
+                    opacity: 0;
                     height: 87%;
                     top: 46%
+                }
+
+                &.-active {
+                    opacity: 1;
                 }
             }
 
@@ -55,6 +60,7 @@
 
         &__slide {
             padding: 0 10px;
+            cursor: pointer;
         }
 
         .slick-slider {
