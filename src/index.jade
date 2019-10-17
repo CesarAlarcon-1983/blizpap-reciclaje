@@ -5,11 +5,11 @@ include ./_modules/slider/slider
 block content
     main.home
         .home__indicators
-            span.-indicator.-active
-            span.-indicator
-            span.-indicator
-            span.-indicator
-        section.home__hero
+            a(href="#home").-indicator
+            a(href="#reciclaje").-indicator
+            a(href="#diversion").-indicator
+            a(href="#mundo").-indicator
+        section.home__hero#hero
             a.home__hero__scroll-container(href="#reciclaje")
                 .home__hero__arrow-icon
                     img(src="/images/arrow-bottom-alone.png")
@@ -57,7 +57,7 @@ block content
                 a.home__reciclaje__tooltip(href="/reciclaje")
                     img.-close(src="/images/home/tooltip.png")
                     img.-open(src="/images/home/tooltip-abierto.png")
-        section.home__diversion
+        section.home__diversion#diversion
             h3.home__diversion__title.wow.bounceInRight diversion
             .home__diversion__tooltips
                 a.home__diversion__tooltip(href="/diversion")
@@ -76,7 +76,7 @@ block content
                     img.-close(src="/images/home/tooltip.png")
                     img.-open(src="/images/home/tooltip-abierto.png")
 
-        section.home__mundo
+        section.home__mundo#mundo
             h3.home__mundo__title.wow.bounceInRight mundo
             .home__mundo__tooltips
                 a.home__mundo__tooltip(href="/mundo")
