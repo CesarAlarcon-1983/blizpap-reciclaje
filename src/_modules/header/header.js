@@ -163,188 +163,53 @@ var Header = function() {
    
     var cuentosSlides = {
         cuento1: [
-            '/images/cuentos/cuento-1/slide-13.png',
-            '/images/cuentos/cuento-1/slide-1.png',
-            '/images/cuentos/cuento-1/slide-2.png',
-            '/images/cuentos/cuento-1/slide-3.png',
-            '/images/cuentos/cuento-1/slide-4.png',
-            '/images/cuentos/cuento-1/slide-5.png',
-            '/images/cuentos/cuento-1/slide-6.png',
-            '/images/cuentos/cuento-1/slide-7.png',
-            '/images/cuentos/cuento-1/slide-8.png',
-            '/images/cuentos/cuento-1/slide-9.png',
-            '/images/cuentos/cuento-1/slide-10.png',
-            '/images/cuentos/cuento-1/slide-11.png',
-            '/images/cuentos/cuento-1/slide-12.png'
-        ],
-        anexo: {
-            room1: [
-                {
-                    'url':'/images/house/anexo/anexo-hab1-1.jpg',
-                },
-                {
-                    'url':'/images/house/anexo/anexo-hab1-2.jpg',
-                }
-            ],
-            room2: [
-                {
-                    'url':'/images/house/anexo/anexo-hab2-1.jpg',
-                },
-                {
-                    'url':'/images/house/anexo/anexo-hab2-2.jpg',
-                },
-                {
-                    'url':'/images/house/anexo/anexo-hab2-3.jpg',
-                },
-                {
-                    'url':'/images/house/anexo/anexo-hab2-4.jpg',
-                }
-            ],
-            room3: [
-            ],
-            room4: [
-                {
-                    'url':'/images/house/anexo/anexo-hab4-1.jpg',
-                },
-                {
-                    'url':'/images/house/anexo/anexo-hab4-2.jpg',
-                },
-                {
-                    'url':'/images/house/anexo/anexo-hab4-3.jpg',
-                },
-                {
-                    'url':'/images/house/anexo/anexo-hab4-4.jpg',
-                }
-            ]
-        },
-        thames: {
-            room0: [
-            ],
-            room1: [
-                {
-                    'url':'/images/house/thames/thames-hab1-1.jpg',
-                },
-                {
-                    'url':'/images/house/thames/thames-hab1-2.jpg',
-                },
-                {
-                    'url':'/images/house/thames/thames-hab1-3.jpg',
-                },
-                {
-                    'url':'/images/house/thames/thames-hab1-4.jpg',
-                }
-            ],
-            room2: [
-                {
-                    'url':'/images/house/thames/thames-hab2-1.jpg',
-                },
-                {
-                    'url':'/images/house/thames/thames-hab2-2.jpg',
-                }
-            ],
-            room3: [
-                {
-                    'url':'/images/house/thames/thames-hab3-1.jpg',
-                },
-                {
-                    'url':'/images/house/thames/thames-hab3-2.jpg',
-                }
-            ],
-            room4: [
-                {
-                    'url':'/images/house/thames/thames-hab4-1.jpg',
-                },
-                {
-                    'url':'/images/house/thames/thames-hab4-2.jpg',
-                }
-            ],
-            room5: [
-            ],
-            room6: [
-                {
-                    'url':'/images/house/thames/thames-hab6-1.jpg',
-                }
-            ],
-            room7: [
-                {
-                    'url':'/images/house/thames/thames-hab7-1.jpg',
-                },
-                {
-                    'url':'/images/house/thames/thames-hab7-2.jpg',
-                },
-                {
-                    'url':'/images/house/thames/thames-hab7-3.jpg',
-                },
-                {
-                    'url':'/images/house/thames/thames-hab7-4.jpg',
-                },
-                {
-                    'url':'/images/house/thames/thames-hab7-5.jpg',
-                }
-            ],
-            room8: [
-                {
-                    'url':'/images/house/thames/thames-hab8-1.jpg',
-                },
-                {
-                    'url':'/images/house/thames/thames-hab8-2.jpg',
-                }
-            ],
-            room9: [
-            ],
-            room10: [
-                {
-                    'url':'/images/house/thames/thames-hab10-1.jpg',
-                },
-                {
-                    'url':'/images/house/thames/thames-hab10-2.jpg',
-                },
-                {
-                    'url':'/images/house/thames/thames-hab10-3.jpg',
-                }
-            ],
-        },
-        pellegrini: {
-            room1: [
-                {
-                    'url':'/images/house/pellegrini/pellegrini-hab1-1.jpg',
-                },
-                {
-                    'url':'/images/house/pellegrini/pellegrini-hab1-2.jpg',
-                }
-            ],
-            room2: [
-                {
-                    'url':'/images/house/pellegrini/pellegrini-hab2-1.jpg',
-                },
-                {
-                    'url':'/images/house/pellegrini/pellegrini-hab2-2.jpg',
-                }
-            ],
-            room3: [
-                {
-                    'url':'/images/house/pellegrini/pellegrini-hab3-1.jpg',
-                },
-                {
-                    'url':'/images/house/pellegrini/pellegrini-hab3-2.jpg',
-                }
-            ],
-            room4: [
-                {
-                    'url':'/images/house/pellegrini/pellegrini-hab4-1.jpg',
-                },
-                {
-                    'url':'/images/house/pellegrini/pellegrini-hab4-2.jpg',
-                }
-            ]
-        }
+            {
+                'url':'/images/cuentos/cuento-1/slide-13.jpg',
+            },
+            {
+                'url':'/images/cuentos/cuento-1/slide-1.png',
+            },
+            {
+                'url':'/images/cuentos/cuento-1/slide-2.png',
+            },
+            {
+                'url':'/images/cuentos/cuento-1/slide-3.png',
+            },
+            {
+                'url':'/images/cuentos/cuento-1/slide-4.png',
+            },
+            {
+                'url':'/images/cuentos/cuento-1/slide-5.png',
+            },
+            {
+                'url':'/images/cuentos/cuento-1/slide-6.png',
+            },
+            {
+                'url':'/images/cuentos/cuento-1/slide-7.png',
+            },
+            {
+                'url':'/images/cuentos/cuento-1/slide-8.png',
+            },
+            {
+                'url':'/images/cuentos/cuento-1/slide-9.png',
+            },
+            {
+                'url':'/images/cuentos/cuento-1/slide-10.png',
+            },
+            {
+                'url':'/images/cuentos/cuento-1/slide-11.png',
+            },
+            {
+                'url':'/images/cuentos/cuento-1/slide-12.png'
+            }
+        ]
     }
 
     var cuentos = $('.-placeholder')
-    var cuentoIndex = $('.-placeholder').attr('data-cuento');
 
     cuentos.on('click', function() {
         var cuento = $(this).attr('data-cuento');
+        console.log(cuento)
         
         if(cuentosSlides[cuento].length > 0) {
             $(this).iLightBox(cuentosSlides[cuento]);
