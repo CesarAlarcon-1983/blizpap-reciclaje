@@ -34,7 +34,6 @@ var Header = function() {
         $(contents[index]).addClass('-active');
     })
 
-    console.log(contents);
     var viewport = 0;
     var scroll = 0;
 
@@ -87,6 +86,141 @@ var Header = function() {
             }
         }
     });
+    
+    var slideImages = [
+        '/images/familia/hero-1.jpg',
+        '/images/familia/hero-2.png'
+    ]
+
+    var currentSlide = 0;
+    var heroImage = $('.diversion-en-familia__hero img');
+    
+    setTimeout(function() {
+        var sliderArrowNext = $('.slick-next');
+        var sliderArrowPrev = $('.slick-prev');
+        console.log(heroImage);
+        sliderArrowPrev.on('click', function() {
+            if(currentSlide > 0) {
+                currentSlide--
+                heroImage.attr('src', slideImages[currentSlide]);
+            } else {
+                currentSlide = slideImages.length  - 1;
+                heroImage.attr('src', slideImages[currentSlide]);
+            }
+        })
+
+        sliderArrowNext.on('click', function() {
+            if(currentSlide < slideImages.length - 1) {
+                currentSlide++
+                heroImage.attr('src', slideImages[currentSlide]);
+            } else {
+                currentSlide = 0;
+                heroImage.attr('src', slideImages[currentSlide]);
+            }
+        })
+    }, 300) 
+
+    $(heroImage[0]).attr('src', slideImages[0]);
+
+    //Home idicators functionallity
+
+    var indicators = $('.-indicator');
+
+    indicators.on('click', function() {
+        indicators.removeClass('-active')
+        $(this).addClass('-active');
+    })
+
+    $(indicators[0]).addClass('-active')
+
+    var heroHeight = $('#hero').height();
+    var reciclajeHeight = $('#reciclaje').height();
+    var diversionHeight = $('#diversion').height();
+
+    $(document).on('scroll', function() {
+        if($(document).scrollTop() < heroHeight) {
+            indicators.removeClass('-active')
+            $(indicators[0]).addClass('-active');
+        }
+
+        if($(document).scrollTop() >= heroHeight) {
+            indicators.removeClass('-active')
+            $(indicators[1]).addClass('-active');
+        }
+        
+        if($(document).scrollTop() >= reciclajeHeight + heroHeight) {
+            indicators.removeClass('-active')
+            $(indicators[2]).addClass('-active');
+        }
+
+        if($(document).scrollTop() >= diversionHeight + reciclajeHeight + heroHeight) {
+            indicators.removeClass('-active')
+            $(indicators[3]).addClass('-active');
+        }
+    })
+
+    //cuentos Functionallity
+   
+    var cuentosSlides = {
+        cuento1: [
+            {
+                'url':'/images/cuentos/cuento-1/slide-13.jpg',
+            },
+            {
+                'url':'/images/cuentos/cuento-1/slide-1.png',
+            },
+            {
+                'url':'/images/cuentos/cuento-1/slide-2.png',
+            },
+            {
+                'url':'/images/cuentos/cuento-1/slide-3.png',
+            },
+            {
+                'url':'/images/cuentos/cuento-1/slide-4.png',
+            },
+            {
+                'url':'/images/cuentos/cuento-1/slide-5.png',
+            },
+            {
+                'url':'/images/cuentos/cuento-1/slide-6.png',
+            },
+            {
+                'url':'/images/cuentos/cuento-1/slide-7.png',
+            },
+            {
+                'url':'/images/cuentos/cuento-1/slide-8.png',
+            },
+            {
+                'url':'/images/cuentos/cuento-1/slide-9.png',
+            },
+            {
+                'url':'/images/cuentos/cuento-1/slide-10.png',
+            },
+            {
+                'url':'/images/cuentos/cuento-1/slide-11.png',
+            },
+            {
+                'url':'/images/cuentos/cuento-1/slide-12.png'
+            }
+        ]
+    }
+
+    var cuentos = $('.-placeholder')
+
+    cuentos.on('click', function() {
+        var cuento = $(this).attr('data-cuento');
+        console.log(cuento)
+        
+        if(cuentosSlides[cuento].length > 0) {
+            $(this).iLightBox(cuentosSlides[cuento]);
+        } else {
+            var alert = '<div class="center" style="background: #fff; padding: 50px; text-align: center">' + 
+                '<h2>No Cuento available</h2>' +
+                '</div>';
+            $.iLightBox([{url:alert, type: 'html'}])
+        }
+    });
+
 };
 
 module.exports = Header;

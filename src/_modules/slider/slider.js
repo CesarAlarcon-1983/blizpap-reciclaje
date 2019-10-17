@@ -49,7 +49,7 @@ var Slider = function() {
     if (sliderMulti3) {
         sliderMulti3.each(function(){
             $(this).slick({
-                dots: true,
+                dots: false,
                 infinite: true,
                 slidesToShow: 3,
                 slidesToScroll: 3,
@@ -57,8 +57,8 @@ var Slider = function() {
                     {
                         breakpoint: 900,
                         settings: {
-                            slidesToShow: 3,
-                            slidesToScroll: 3
+                            slidesToShow: 1,
+                            slidesToScroll: 1
                         }
                     },
                     {

@@ -38,11 +38,13 @@
                 &.-placeholder {
                     opacity: 0;
                     height: 87%;
-                    top: 46%
+                    top: 46%;
+                    pointer-events: none;
                 }
 
                 &.-active {
                     opacity: 1;
+                    pointer-events: all;
                 }
             }
 
