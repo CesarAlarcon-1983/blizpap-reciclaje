@@ -111,7 +111,7 @@
 
             &:hover {
                 .-arrow-prev {
-                    left: -70%;
+                    left: -80%;
                 }
 
                 .creaciones__hero__thumbnail-next,
@@ -125,7 +125,7 @@
                 pointer-events: none;
                 opacity: .7;
             }
-            
+
             .-arrow-prev,
             .-arrow-next {
                 @include trans;
