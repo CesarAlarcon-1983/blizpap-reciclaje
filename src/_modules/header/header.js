@@ -164,7 +164,7 @@ var Header = function() {
     var cuentosSlides = {
         cuento1: [
             {
-                'url':'/images/cuentos/cuento-1/slide-13.png',
+                'url':'/images/cuentos/cuento-1/slide-13.png'
             },
             {
                 'url':'/images/cuentos/cuento-1/slide-1.png',
@@ -400,19 +400,24 @@ var Header = function() {
             }
         ]
     }
+    
     var cuentos = $('.-placeholder')
-
-    $.iLightBox({
-        path:'horizontal'
-    })
-
 
     cuentos.on('click', function() {
         var cuento = $(this).attr('data-cuento');
         console.log(cuento)
         
         if(cuentosSlides[cuento].length > 0) {
-            $(this).iLightBox(cuentosSlides[cuento]);
+            $(this).iLightBox(
+                cuentosSlides[cuento],
+                {
+                    path:'horizontal',
+                    controls: {
+                        thumbnail: false,
+                        arrows:'true'
+                    }
+                }
+            );
         } else {
             var alert = '<div class="center" style="background: #fff; padding: 50px; text-align: center">' + 
                 '<h2>No Cuento available</h2>' +

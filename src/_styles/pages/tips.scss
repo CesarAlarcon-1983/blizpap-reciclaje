@@ -45,7 +45,7 @@
 
             @include mq(md) {
                 padding-bottom: 30%;
-                width: 30%;
+                width: 33%;
                 order: 1;
             }
 
@@ -54,8 +54,8 @@
                 top: 50%;
                 left: 50%;
                 transform: translate3d(-50%, -50%, 0);
-                min-width: 100%;
-                min-height: 100%;
+                width: 100%;
+                height: auto;
             }
         }
 
@@ -67,7 +67,7 @@
             order: 1;
 
             @include mq(md) {
-                width: 68%;
+                width: 65%;
                 order: 2;
             }
 

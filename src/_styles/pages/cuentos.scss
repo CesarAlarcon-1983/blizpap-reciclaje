@@ -40,6 +40,7 @@
                     height: 87%;
                     top: 46%;
                     pointer-events: none;
+                    cursor: pointer;
                 }
 
                 &.-active {
@@ -368,4 +369,9 @@
         }
       }
     }
+}
+
+.ilightbox-holder,
+.ilightbox-overlay {
+    cursor: grab;
 }
