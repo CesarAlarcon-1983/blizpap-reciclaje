@@ -11,3 +11,7 @@ mixin slider(klass, mode)
         ._slider(class=klass)
             if block
                 block
+    if mode == 'static'
+        ._slider-static(class=klass)
+            if block
+                block

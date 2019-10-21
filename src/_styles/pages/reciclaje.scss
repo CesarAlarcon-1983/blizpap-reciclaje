@@ -1,9 +1,11 @@
 .reciclaje {
-    background: url('/images/reciclado/back.jpg') no-repeat center top / cover;
+    background: url('/images/reciclado/back-mobile.jpg') no-repeat center top / cover;
     overflow: hidden;
     
     @include mq(md) {
         margin-bottom: -25vh;
+        background: url('/images/reciclado/back.jpg') no-repeat center top / cover;
+
     }
 
     &__hero {

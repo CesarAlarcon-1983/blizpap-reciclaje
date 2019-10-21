@@ -217,7 +217,7 @@
             color: $white;
             text-transform: uppercase;
             font-family: $altFont;
-            font-size: 28px;
+            font-size: 24px;
             text-align: center;
         }
 
@@ -233,14 +233,18 @@
             justify-content: center;
             align-items: center;
             text-decoration: none;
-            z-index: 10;
+            z-index: 10;            
 
             i {
                 position: absolute;
                 top: -30px;
                 font-size: 50px;
-                left: 50%;
-                transform: translateX(-50%);
+                left: 0;
+                right: 0;
+                width: 50px;
+                margin: auto;
+                animation: arrowDown .8s ease infinite forwards;
+                color: $black;
             }
 
             p {
@@ -429,5 +433,14 @@
     &.-close {
         opacity: 0;
     }
+}
+
+@keyframes arrowDown {
+  0%{
+      transform: translateY(0);
+  }
+  100%{
+      transform: translateY(10px);
+  }
 }
 
