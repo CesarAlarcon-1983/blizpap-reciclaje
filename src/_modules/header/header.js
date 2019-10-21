@@ -164,7 +164,7 @@ var Header = function() {
     var cuentosSlides = {
         cuento1: [
             {
-                'url':'/images/cuentos/cuento-1/slide-13.jpg',
+                'url':'/images/cuentos/cuento-1/slide-13.png'
             },
             {
                 'url':'/images/cuentos/cuento-1/slide-1.png',
@@ -202,9 +202,205 @@ var Header = function() {
             {
                 'url':'/images/cuentos/cuento-1/slide-12.png'
             }
+        ],
+        cuento2: [
+            {
+                'url':'/images/cuentos/cuento-2/slide-1.png',
+            },
+            {
+                'url':'/images/cuentos/cuento-2/slide-2.png',
+            },
+            {
+                'url':'/images/cuentos/cuento-2/slide-3.png',
+            },
+            {
+                'url':'/images/cuentos/cuento-2/slide-4.png',
+            },
+            {
+                'url':'/images/cuentos/cuento-2/slide-5.png',
+            },
+            {
+                'url':'/images/cuentos/cuento-2/slide-6.png',
+            },
+            {
+                'url':'/images/cuentos/cuento-2/slide-7.png',
+            },
+            {
+                'url':'/images/cuentos/cuento-2/slide-8.png',
+            },
+            {
+                'url':'/images/cuentos/cuento-2/slide-9.png',
+            },
+            {
+                'url':'/images/cuentos/cuento-2/slide-10.png',
+            }
+        ],
+        cuento3: [
+            {
+                'url':'/images/cuentos/cuento-2/slide-1.png',
+            },
+            {
+                'url':'/images/cuentos/cuento-2/slide-2.png',
+            },
+            {
+                'url':'/images/cuentos/cuento-2/slide-3.png',
+            },
+            {
+                'url':'/images/cuentos/cuento-2/slide-4.png',
+            },
+            {
+                'url':'/images/cuentos/cuento-2/slide-5.png',
+            },
+            {
+                'url':'/images/cuentos/cuento-2/slide-6.png',
+            },
+            {
+                'url':'/images/cuentos/cuento-2/slide-7.png',
+            },
+            {
+                'url':'/images/cuentos/cuento-2/slide-8.png',
+            },
+            {
+                'url':'/images/cuentos/cuento-2/slide-9.png',
+            },
+            {
+                'url':'/images/cuentos/cuento-2/slide-10.png',
+            },
+            {
+                'url':'/images/cuentos/cuento-2/slide-11.png',
+            }
+        ],
+        cuento4: [
+            {
+                'url':'/images/cuentos/cuento-2/slide-1.png',
+            },
+            {
+                'url':'/images/cuentos/cuento-2/slide-2.png',
+            },
+            {
+                'url':'/images/cuentos/cuento-2/slide-3.png',
+            },
+            {
+                'url':'/images/cuentos/cuento-2/slide-4.png',
+            },
+            {
+                'url':'/images/cuentos/cuento-2/slide-5.png',
+            },
+            {
+                'url':'/images/cuentos/cuento-2/slide-6.png',
+            },
+            {
+                'url':'/images/cuentos/cuento-2/slide-7.png',
+            },
+            {
+                'url':'/images/cuentos/cuento-2/slide-8.png',
+            },
+            {
+                'url':'/images/cuentos/cuento-2/slide-9.png',
+            },
+            {
+                'url':'/images/cuentos/cuento-2/slide-10.png',
+            },
+            {
+                'url':'/images/cuentos/cuento-2/slide-11.png',
+            },
+            {
+                'url':'/images/cuentos/cuento-2/slide-12.png',
+            },
+            {
+                'url':'/images/cuentos/cuento-2/slide-13.png',
+            }
+        ],
+        cuento5: [
+            {
+                'url':'/images/cuentos/cuento-2/slide-1.png',
+            },
+            {
+                'url':'/images/cuentos/cuento-2/slide-2.png',
+            },
+            {
+                'url':'/images/cuentos/cuento-2/slide-3.png',
+            },
+            {
+                'url':'/images/cuentos/cuento-2/slide-4.png',
+            },
+            {
+                'url':'/images/cuentos/cuento-2/slide-5.png',
+            },
+            {
+                'url':'/images/cuentos/cuento-2/slide-6.png',
+            },
+            {
+                'url':'/images/cuentos/cuento-2/slide-7.png',
+            },
+            {
+                'url':'/images/cuentos/cuento-2/slide-8.png',
+            },
+            {
+                'url':'/images/cuentos/cuento-2/slide-9.png',
+            },
+            {
+                'url':'/images/cuentos/cuento-2/slide-10.png',
+            },
+            {
+                'url':'/images/cuentos/cuento-2/slide-11.png',
+            },
+            {
+                'url':'/images/cuentos/cuento-2/slide-12.png',
+            },
+            {
+                'url':'/images/cuentos/cuento-2/slide-13.png',
+            }
+        ],
+        cuento6: [
+            {
+                'url':'/images/cuentos/cuento-2/slide-1.png',
+            },
+            {
+                'url':'/images/cuentos/cuento-2/slide-2.png',
+            },
+            {
+                'url':'/images/cuentos/cuento-2/slide-3.png',
+            },
+            {
+                'url':'/images/cuentos/cuento-2/slide-4.png',
+            },
+            {
+                'url':'/images/cuentos/cuento-2/slide-5.png',
+            },
+            {
+                'url':'/images/cuentos/cuento-2/slide-6.png',
+            },
+            {
+                'url':'/images/cuentos/cuento-2/slide-7.png',
+            },
+            {
+                'url':'/images/cuentos/cuento-2/slide-8.png',
+            },
+            {
+                'url':'/images/cuentos/cuento-2/slide-9.png',
+            },
+            {
+                'url':'/images/cuentos/cuento-2/slide-10.png',
+            },
+            {
+                'url':'/images/cuentos/cuento-2/slide-11.png',
+            },
+            {
+                'url':'/images/cuentos/cuento-2/slide-12.png',
+            },
+            {
+                'url':'/images/cuentos/cuento-2/slide-13.png',
+            },
+            {
+                'url':'/images/cuentos/cuento-2/slide-14.png',
+            },
+            {
+                'url':'/images/cuentos/cuento-2/slide-15.png',
+            }
         ]
     }
-
+    
     var cuentos = $('.-placeholder')
 
     cuentos.on('click', function() {
@@ -212,7 +408,16 @@ var Header = function() {
         console.log(cuento)
         
         if(cuentosSlides[cuento].length > 0) {
-            $(this).iLightBox(cuentosSlides[cuento]);
+            $(this).iLightBox(
+                cuentosSlides[cuento],
+                {
+                    path:'horizontal',
+                    controls: {
+                        thumbnail: false,
+                        arrows:'true'
+                    }
+                }
+            );
         } else {
             var alert = '<div class="center" style="background: #fff; padding: 50px; text-align: center">' + 
                 '<h2>No Cuento available</h2>' +
