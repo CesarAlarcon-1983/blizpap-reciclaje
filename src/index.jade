@@ -16,7 +16,7 @@ block content
                 p.home__hero__scroll-text
                     |scroll para
                     span descubrir otro mundo
-            +slider('home__hero__slider', 'normal')
+            +slider('home__hero__slider', 'static')
                 .home__hero__slide
                     img.wow.fadeInLeft.-align-left(src="/images/home/left-hand.png")
                     img.wow.fadeInRight.-align-right(src="/images/home/right-hand.png")
@@ -40,7 +40,15 @@ block content
                             p conocelos aquí
         
         section.home__reciclaje#reciclaje
+            .home__reciclaje__stage#reciclajeStage
+              img(data-depth="0.1", src="/images/home/stages/reciclaje-back.png")
+              img(data-depth="0.2", src="/images/home/stages/reciclaje-main.png")
+              img(data-depth="0.4", src="/images/home/stages/reciclaje-byp.png")
+              img(data-depth="0.7", src="/images/home/stages/reciclaje-front.png")
             h3.home__reciclaje__title.wow.bounceInRight reciclaje
+            a.home__reciclaje__cta(href="/reciclaje")
+              span 
+              p Empieza ahora
             .home__reciclaje__tooltips
                 a.home__reciclaje__tooltip(href="/reciclaje#top")
                     img.-close(src="/images/home/tooltip.png")
@@ -57,8 +65,20 @@ block content
                 a.home__reciclaje__tooltip(href="/reciclaje#tips")
                     img.-close(src="/images/home/tooltip.png")
                     img.-open(src="/images/home/tooltips/reciclaje-tips.png")
+        
         section.home__diversion
+            .home__diversion__stage#diversionStage
+              img(data-depth="0.3", src="/images/home/stages/diversion-back.png")
+              img(data-depth="0.4", src="/images/home/stages/diversion-main.png")
+              img.wow.fadeInLeftBig(src="/images/home/stages/diversion-left.png")
+              img.wow.fadeInRightBig(src="/images/home/stages/diversion-right.png")
+              img(data-depth="0.2", src="/images/home/stages/diversion-front.png")
+            
             h3.home__diversion__title.wow.bounceInRight diversion
+            a.home__reciclaje__cta(href="/diversion")
+              span 
+              p Empieza ahora
+
             .home__diversion__tooltips
                 a.home__diversion__tooltip(href="/diversion#juegos")
                     img.-close(src="/images/home/tooltip.png")
@@ -76,15 +96,27 @@ block content
                     img.-close(src="/images/home/tooltip.png")
                     img.-open(src="/images/home/tooltips/diversion-tu-diversion.png")
 
-        section.home__mundo#mundo
+        section.home__mundo#mundo            
+            .home__mundo__stage#mundoStage
+              img(data-depth="0.2", src="/images/home/stages/mundo-back.png")
+              img(data-depth="0.2", src="/images/home/stages/mundo-stars.png")
+              img(data-depth="0.6", src="/images/home/stages/mundo-main.png")
+              img(data-depth="0.8", src="/images/home/stages/mundo-planeta-left.png")
+              img(src="/images/home/stages/mundo-left.png")
+              img(src="/images/home/stages/mundo-right.png")
+
             h3.home__mundo__title.wow.bounceInRight mundo
+            a.home__reciclaje__cta(href="/mundo")
+              span 
+              p Empieza ahora
+
             .home__mundo__tooltips
                 a.home__mundo__tooltip(href="/mundo#historias")
                     img.-close(src="/images/home/tooltip.png")
-                    img.-open(src="/images/home/tooltips/diversion-tu-diversion.png")
+                    img.-open(src="/images/home/tooltips/mundo-historia.png")
                 a.home__mundo__tooltip(href="/mundo#productos")
                     img.-close(src="/images/home/tooltip.png")
-                    img.-open(src="/images/home/tooltips/diversion-tu-diversion.png")
+                    img.-open(src="/images/home/tooltips/mundo-productos.png")
                 a.home__mundo__tooltip(href="/mundo#campanas")
                     img.-close(src="/images/home/tooltip.png")
-                    img.-open(src="/images/home/tooltips/diversion-tu-diversion.png")
+                    img.-open(src="/images/home/tooltips/mundo-campanas.png")

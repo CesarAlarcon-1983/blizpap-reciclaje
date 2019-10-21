@@ -14,10 +14,24 @@ block content
         .mapa__searchbar
             i.fa.fa-search
             input(placeholder="buscar el punto limpio más cercano")
-        a.mapa__add-button(href="#")
+        a.mapa__add-button(href="#form")
             img(src="/images/home/tooltip.png")
             p sugerir
             span punto<br>limpio
+        
+        form.mapa__form
+            h3.mapa__form__title Tu sugerencia
+            .mapa__form__group
+                input.mapa__form__input(placeholder="calle")
+            .mapa__form__group
+                input.mapa__form__input(placeholder="numero")
+            .mapa__form__group
+                input.mapa__form__input(placeholder="localidad")
+            button.mapa__form__button
+                span
+                p enviar
+
+
         .mapa__pins
             img(src="/images/reciclado/mapa-pin.png")
             img(src="/images/reciclado/mapa-pin.png")

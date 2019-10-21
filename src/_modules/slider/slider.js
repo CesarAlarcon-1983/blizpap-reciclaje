@@ -3,6 +3,7 @@
 // Constructor
 var Slider = function() {
     var slider = $('._slider');
+    var sliderStatic = $('._slider-static');
     var sliderMulti = $('._slidermulti');
     var sliderMulti3 = $('._slidermulti3');
 
@@ -16,6 +17,18 @@ var Slider = function() {
                 autoplay: true
             });
         });
+    }
+
+    if (sliderStatic) {
+      sliderStatic.each(function(){
+          $(this).slick({
+              dots: false,
+              fade: true,
+              arrows: true,
+              infinite: true,
+              autoplay: false
+          });
+      });
     }
 
     if (sliderMulti) {

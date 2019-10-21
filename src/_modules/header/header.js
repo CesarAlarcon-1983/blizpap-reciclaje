@@ -426,6 +426,20 @@ var Header = function() {
         }
     });
 
+    if ($('.home').length > 0) {
+      var sceneOne = document.getElementById('reciclajeStage');
+      var parallaxInstanceOne = new Parallax(sceneOne);
+  
+      var sceneTwo = document.getElementById('diversionStage');
+      var parallaxInstanceTwo = new Parallax(sceneTwo);
+  
+      var sceneThree = document.getElementById('mundoStage');
+      var parallaxInstanceThree = new Parallax(sceneThree);
+    }
+
+    $('.mapa__add-button').on('click', function() {
+      $('.mapa__form').addClass('-visible');
+    });
 };
 
 module.exports = Header;
