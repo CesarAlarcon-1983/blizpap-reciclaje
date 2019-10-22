@@ -25,13 +25,12 @@
     }
 
     &__hero {
-        height: 100vh;
-        background: url('/images/reciclado/creaciones-hero-bg.jpg') no-repeat center top / contain;
+        height: 140vh;
+        background: url('/images/reciclado/creaciones-hero-bg.jpg') no-repeat center top / cover;
         position: relative;
 
         @include mq(md) {
             background: url('/images/reciclado/creaciones-hero-bg.jpg') no-repeat center top / cover;
-            height: 140vh;
         }
 
         &__left-hand,
@@ -40,9 +39,11 @@
             bottom: 0   ;
             z-index: 10;
             width: 25%;
+            display: none;
 
             @include mq(md) {
                 bottom: -50px;
+                display: block;
             }
 
             img {
@@ -58,34 +59,36 @@
 
         &__title {
             position: absolute;
-            top: 30%;
+            top: 27%;
             left: 50%;
-            width: 800px;
-            max-width: 70%;
+            width: 90%;
             transform: translateX(-50%);
             margin: 0;
             text-transform: uppercase;
             color: $red;
-            font-size: 30px;
+            font-size: 26px;
             font-family: $altFont;
             text-align: center;
-
+            
             @include mq(md) {
+                max-width: 70%;
                 top: 15%;
                 font-size: 60px;
+                width: 800px;
             }
         }
 
         &__container {
             position: absolute;
-            top: 40%;
+            top: 35%;
             left: 50%;
             transform: translateX(-50%);
             width: 90%;
-            height: 40%;
+            height: 30%;
 
             @include mq(md) {
                 width: 50%;
+                height: 40%;
                 top: 30%;
             }
         }
@@ -98,6 +101,7 @@
         &__arrow-next {
             @include trans;
 
+            display: none;
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
@@ -108,6 +112,10 @@
             border-radius: 50%;
             z-index: 3;
             cursor: pointer;
+
+            @include mq(md) {
+                display: block;
+            }
 
             &:hover {
                 .-arrow-prev {
@@ -130,11 +138,16 @@
             .-arrow-next {
                 @include trans;
 
+                display: none;
                 position: absolute;
                 top: 50%;
                 left: 50%;
                 transform: translate3d(-50%, -50%, 0);
                 z-index: 2;
+
+                @include mq(md) {
+                    display: block;
+                }
             }
         }
 
@@ -195,7 +208,7 @@
                 opacity: 0;
                 pointer-events: none;
                 border: none;
-                
+
                 &.-active {
                     opacity: 1;
                     pointer-events: all;
@@ -218,8 +231,14 @@
             color: $white;
             text-transform: uppercase;
             font-family: $altFont;
-            font-size: 24px;
+            font-size: 18px;
             text-align: center;
+            margin-bottom: 40px;
+
+            @include mq(md) {
+                font-size: 24px;
+                margin-bottom: 0;
+            }
         }
 
         &__scroll-button {
@@ -234,7 +253,7 @@
             justify-content: center;
             align-items: center;
             text-decoration: none;
-            z-index: 10;            
+            z-index: 10;
 
             i {
                 position: absolute;
@@ -279,9 +298,11 @@
             position: absolute;
             left: 10px;
             bottom: -100px;
+            display: none;
             
             @include mq(md) {
                 bottom: -200px;
+                display: block;
             }
 
             img {
@@ -377,9 +398,11 @@
             padding: 0 20px;
             margin-left: auto;
             margin-right: auto;
+            margin-bottom: 50px;
 
             @include mq(md) {
                 height: 60px;
+                margin-bottom: 0;
                 width: 60%;
             }
 
