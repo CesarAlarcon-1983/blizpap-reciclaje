@@ -301,7 +301,7 @@
         position: relative;
 
         @include mq(md) {
-          background: url('/images/home/reciclaje.jpg') no-repeat center center / cover;
+          background: $green;
 
         }
 
@@ -356,7 +356,9 @@
 
           img {
             position: absolute;
-            width: 100%;
+            width: 110%;
+            left:-5% !important;
+            top: 0;
           }
 
           @include mq(md) {
@@ -441,7 +443,7 @@
         position: relative;
 
         @include mq(md) {
-          background: url('/images/home/diversion.jpg') no-repeat center center / cover;
+          background: $green;
         }
 
         &__stage {
@@ -454,7 +456,9 @@
 
           img {
             position: absolute;
-            width: 100%;
+            width: 110%;
+            left:-5% !important;
+            top: 0;
           }
 
           @include mq(md) {
@@ -535,11 +539,13 @@
     }
 
     &__mundo {
-        background: url('/images/home/mundo-mobile.jpg') no-repeat center center / cover;
+        background: $black url('/images/home/mundo-mobile.jpg') no-repeat center top / 105%;
         position: relative;
+        height: 90vh;
 
         @include mq(md) {
-          background: url('/images/home/mundo.jpg') no-repeat center center / cover;
+          background: $black;
+          height: 100vh;
         }
 
         &__stage {
@@ -552,7 +558,9 @@
 
           img {
             position: absolute;
-            width: 100%;
+            width: 110%;
+            left:-5% !important;
+            top: 0;
 
             &:nth-child(2) {
               animation: stars 3s ease infinite;
