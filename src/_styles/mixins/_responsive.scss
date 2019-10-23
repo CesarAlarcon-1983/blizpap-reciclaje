@@ -1,7 +1,8 @@
 $sm-min: 768px;
 $md-min: 992px;
 $lg-min: 1200px;
-
+$lgHeight: 800px;
+$lgWidth: 380px;
 
 @mixin mq($class, $mode: false) {
     @if $class == xs {
@@ -28,6 +29,15 @@ $lg-min: 1200px;
 
     @else if $class == lg {
         @media ( min-width: $lg-min ) { @content; }
+    }
+
+    @else if $class == lgHeight {
+        // @if $mode == only {
+        //     @media ( min-width: $md-min ) and ( max-width: $lg-min - 1px ) { @content; }
+        // }
+        // @else {
+        // }
+        @media ( min-height: $lgHeight ) and ( max-width: $lgWidth ) { @content; }
     }
 
     @else {

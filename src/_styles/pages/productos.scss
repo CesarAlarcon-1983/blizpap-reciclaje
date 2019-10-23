@@ -51,6 +51,9 @@
             line-height: 55px;
             text-decoration: none;
             margin-top: 20px;
+            background: none;
+            outline: none;
+            cursor: pointer;
             
             @include mq(md) {
                 width: 48%;
@@ -108,12 +111,25 @@
         }
     }
 
+    &__wrapper {
+        @include trans;
+
+        opacity: 0;
+        overflow: hidden;
+        height: 0;
+
+        &.-active {
+            opacity: 1;
+            height: auto;
+        }
+    }
+
     &__container {
         width: 90%;
         margin-left: auto;
         margin-right: auto;
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-start;
         flex-wrap: wrap;
 
         @include mq(md) {
@@ -123,6 +139,7 @@
 
     &__producto {
         width: 50%;
+        overflow: hidden;
         
         @include mq(md) {
             margin-bottom: 40px;
@@ -132,14 +149,14 @@
         img {
             display: block;
             width: auto;
-            height: 40%;
+            width: 50%;
             margin-bottom: 0;
             margin-left: auto;
             margin-right: auto;
+            height: auto;
 
             @include mq(md) {
                 margin-bottom: 40px;
-                height: 60%;
             }
         }
 

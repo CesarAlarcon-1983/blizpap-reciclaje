@@ -9,61 +9,83 @@ block content
         h2.productos__title productos
         p.productos__text que rico es divertirse compartiendo con bilz y pap
         .productos__buttons
-            a.productos__buttons__button(href="#")
+            button.productos__buttons__button(data-target="bebidas")
                 span
                 p nuestras bebidas
-            a.productos__buttons__button.productos__buttons__button--white(href="#")
+            button.productos__buttons__button.productos__buttons__button--white(data-target="especiales")
                 span
                 p ediciones especiales
-        h3.productos__subtitle tradicional, la de siempre
-        .productos__container
-            .productos__producto
-                img(src="/images/diversion/prod-1.png")
-                p grb 373 cc
-            .productos__producto
-                img(src="/images/diversion/prod-2.png")
-                p lata 350 cc
-            .productos__producto
-                img(src="/images/diversion/prod-3.png")
-                p pet 250 cc
-            .productos__producto
-                img(src="/images/diversion/prod-4.png")
-                p pet 500 cc
-            .productos__producto
-                img(src="/images/diversion/prod-5.png")
-                p pet 1500 cc
-            .productos__producto
-                img(src="/images/diversion/prod-6.png")
-                p prb 1250 cc
-            .productos__producto
-                img(src="/images/diversion/prod-7.png")
-                p prb 2500 cc
-            .productos__producto
-                img(src="/images/diversion/prod-8.png")
-                p ret 1000 cc
-            .productos__producto
-                img(src="/images/diversion/prod-9.png")
-                p ret 1500 cc
-            .productos__producto
-                img(src="/images/diversion/prod-10.png")
-                p ret 2000 cc
-            .productos__producto
-                img(src="/images/diversion/prod-11.png")
-                p prb 2500 cc
-            .productos__producto
-                img(src="/images/diversion/prod-12.png")
-                p ret 1000 cc
-        h3.productos__subtitle la version zero
-        .productos__container
-            .productos__producto
-                img(src="/images/diversion/prod-zero-1.png")
-                p 250 cc zero
-            .productos__producto
-                img(src="/images/diversion/prod-zero-2.png")
-                p 500 cc zero
-            .productos__producto
-                img(src="/images/diversion/prod-zero-3.png")
-                p 1500 cc zero
-            .productos__producto
-                img(src="/images/diversion/prod-zero-4.png")
-                p 2000 cc zero
+        .productos__wrapper(data-content="bebidas")
+            h3.productos__subtitle tradicional, la de siempre
+            .productos__container
+                .productos__producto
+                    img(src="/images/diversion/prod-1.png")
+                    p grb 373 cc
+                .productos__producto
+                    img(src="/images/diversion/prod-2.png")
+                    p lata 350 cc
+                .productos__producto
+                    img(src="/images/diversion/prod-3.png")
+                    p pet 250 cc
+                .productos__producto
+                    img(src="/images/diversion/prod-4.png")
+                    p pet 500 cc
+                .productos__producto
+                    img(src="/images/diversion/prod-5.png")
+                    p pet 1500 cc
+                .productos__producto
+                    img(src="/images/diversion/prod-6.png")
+                    p prb 1250 cc
+                .productos__producto
+                    img(src="/images/diversion/prod-7.png")
+                    p prb 2500 cc
+                .productos__producto
+                    img(src="/images/diversion/prod-8.png")
+                    p ret 1000 cc
+                .productos__producto
+                    img(src="/images/diversion/prod-9.png")
+                    p ret 1500 cc
+                .productos__producto
+                    img(src="/images/diversion/prod-10.png")
+                    p ret 2000 cc
+                .productos__producto
+                    img(src="/images/diversion/prod-11.png")
+                    p prb 2500 cc
+                .productos__producto
+                    img(src="/images/diversion/prod-12.png")
+                    p ret 1000 cc
+            h3.productos__subtitle la version zero
+            .productos__container
+                .productos__producto
+                    img(src="/images/diversion/prod-zero-1.png")
+                    p 250 cc zero
+                .productos__producto
+                    img(src="/images/diversion/prod-zero-2.png")
+                    p 500 cc zero
+                .productos__producto
+                    img(src="/images/diversion/prod-zero-3.png")
+                    p 1500 cc zero
+                .productos__producto
+                    img(src="/images/diversion/prod-zero-4.png")
+                    p 2000 cc zero
+        .productos__wrapper(data-content="especiales")
+            h3.productos__subtitle ediciones especiales
+            .productos__container
+                .productos__producto
+                    img(src="/images/productos/especial-1.jpg")
+                    p navidad
+                .productos__producto
+                    img(src="/images/productos/especial-2.jpg")
+                    p navidad
+                .productos__producto
+                    img(src="/images/productos/especial-3.jpg")
+                    p navidad
+                .productos__producto
+                    img(src="/images/productos/especial-4.jpg")
+                    p navidad
+                .productos__producto
+                    img(src="/images/productos/especial-5.jpg")
+                    p navidad
+                .productos__producto
+                    img(src="/images/productos/especial-6.jpg")
+                    p navidad

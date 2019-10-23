@@ -16,6 +16,10 @@
             padding-top: 20vh;
         }
 
+        @include mq(lgHeight) {
+            height: 100vh;
+        }
+
         &__title {
             font-family: $altFont;
             text-transform: uppercase;
@@ -65,13 +69,14 @@
             margin: 0;
             font-weight: 500;
             z-index: 2;
-            width: 90%;
+            width: 100%;
             text-transform: uppercase;
             font-size: 14px;
             
             @include mq(md) {
                 font-size: 18px;
                 top: 50%;
+                width: 90%;
             }
         }
     }
@@ -82,6 +87,11 @@
         
         @include mq(md) {
             height: 100vh;
+        }
+
+        @include mq(lgHeight) {
+            height: 60vh;
+
         }
 
         &__container {
@@ -170,6 +180,17 @@
 
     &__juegos {
         height: 100vh;
+
+        @include mq(md) {
+            height: 120vh;
+        }
+
+        @include mq(lgHeight) {
+            height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
 
         &__container {
             width: 100%;
@@ -289,17 +310,22 @@
         align-items: center;
         
         @include mq(md) {
-            height: 66vh;
+            height: 90vh;
+        }
+
+        @include mq(lgHeight) {
+            height: 120vh;
         }
 
         &__container {
             width: 90%;
             margin-left: 5%;
-            padding-top: 20vh;
+            padding-top: 30vh;
             
             @include mq(md) {
                 width: 30%;    
                 margin-left: 60%;
+                padding-top: 15vh;
             }
         }
 
@@ -377,19 +403,26 @@
     }
 
     &__compartir {
-        height: 110vh;
-        padding: 0 15px;
+        height: 115vh;
+        padding: 0 15px 50px 15px;
         display: flex;
-        align-items: center;
-
+        align-items: flex-end;
+        
         @include mq(md) {
+            align-items: center;
             padding: 0 12%;
-            height: 100vh;
+            height: auto;
+        }
+
+        @include mq(lgHeight) {
+            height: 70vh;
+            align-items: flex-end;
+            padding-bottom: 50px;
         }
 
         &__container {
             width: 100%;
-            padding-top: 45vh;
+            // padding-top: 45vh;
             
             @include mq(md) {
                 width: 50%;
@@ -398,6 +431,11 @@
             img {
                 width: 100%;
                 height: auto;
+                display: none;
+
+                @include mq(md) {
+                    display: block;
+                }
             }
         }
 
